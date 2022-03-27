@@ -95,22 +95,19 @@ h6 {
       "header header"
       "nav content";
    grid-template-rows: 60px 1fr;
-   grid-template-columns: 1fr 2fr;
+   grid-template-columns: 1fr 1fr 2fr 1fr;
    grid-gap: 10px;
-}
-
-.container {
-   max-width: 1200px;
-   margin: 0 auto;
+   min-height: 100%;
 }
 
 .header {
    background-color: #4c979c;
    grid-area: header;
+   grid-column: 2/4;
 }
 
 .header img {
-   width: 20px;
+   height: 100%;
 }
 
 .navigation {
@@ -119,11 +116,14 @@ h6 {
    font-size: 20px;
    line-height: 2;
    text-align: center;
+
+   grid-column: 2/3;
 }
 
 .content {
    background-color: #10a9b4ad;
    grid-area: content;
+   grid-column: 3/4;
 }
 
 .content__background {
