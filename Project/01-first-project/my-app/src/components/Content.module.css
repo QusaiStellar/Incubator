@@ -1,0 +1,100 @@
+.content {
+   background-color: #fff;
+   grid-area: content;
+   grid-column: 3/4;
+}
+
+.contentBackground {
+   height: 100px;
+   width: 100%;
+   margin-bottom: 20px;
+}
+.contentBackground img {
+   height: 100%;
+   width: 100%;
+}
+
+.user {
+   display: flex;
+   margin-bottom: 30px;
+   margin-left: 20px;
+}
+
+.allinfo {
+   padding: 0 0 0 20px;
+}
+
+.name {
+   font-size: 24px;
+   margin-bottom: 10px;
+}
+
+.info {
+   font-size: 18px;
+   line-height: 1.5;
+}
+
+.avatar {
+   width: 250px;
+}
+
+.avatar img {
+   width: 100%;
+   border-radius: 10px;
+}
+
+.post_form {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   margin: 0 20px 20px 20px;
+}
+.textarea_post {
+   resize: none;
+   border: 1px solid black;
+   width: 100%;
+   height: 100px;
+   padding: 10px 20px;
+   margin-bottom: 10px;
+   border-radius: 10px;
+}
+.send_btn {
+   flex: 0 0 auto;
+   background-color: #3f4257;
+   color: #fff;
+   padding: 10px 20px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+.posts {
+   margin: 0 20px;
+}
+.post {
+   display: flex;
+   margin-bottom: 20px;
+}
+
+.post_avatar {
+   flex: 0 0 70px;
+   text-align: center;
+}
+.post_avatar img {
+   width: 50px;
+   border-radius: 50%;
+}
+
+.post_item {
+   flex: 1 1 auto;
+}
+
+.post_nickname {
+   font-size: 16px;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+}
+
+.post_text {
+   font-size: 14px;
+   line-height: 1.5;
+}

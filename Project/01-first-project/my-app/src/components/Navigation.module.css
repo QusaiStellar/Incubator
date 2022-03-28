@@ -1,0 +1,16 @@
+.navigation {
+   background-color: #fff;
+   grid-area: nav;
+   font-size: 18px;
+   grid-column: 2/3;
+}
+
+.navigation a {
+   padding: 10px 0 10px 20px;
+   letter-spacing: 1px;
+   height: 100%;
+   width: 100%;
+   display: block;
+   border-bottom: 1px solid #3f4257;
+   text-transform: uppercase;
+}

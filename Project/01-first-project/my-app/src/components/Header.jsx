@@ -1,7 +1,9 @@
+import styles from './Header.module.css';
+
 const Header = () => {
    return (
-      <header className='header'>
-         <img src={require('../img/logo.png')} />
+      <header className={styles.header}>
+         <div className={styles.logo}>It's my Logo!</div>
       </header>
    );
 }

@@ -88,6 +88,9 @@ h6 {
 }
 
 /*======================================================================================*/
+html {
+   background-color: #edf2f6;
+}
 
 .app-wrapper {
    display: grid;
@@ -95,69 +98,7 @@ h6 {
       "header header"
       "nav content";
    grid-template-rows: 60px 1fr;
-   grid-template-columns: 1fr 1fr 2fr 1fr;
+   grid-template-columns: 1fr minmax(auto, 200px) 2fr 1fr;
    grid-gap: 10px;
    min-height: 100%;
-}
-
-.header {
-   background-color: #4c979c;
-   grid-area: header;
-   grid-column: 2/4;
-}
-
-.header img {
-   height: 100%;
-}
-
-.navigation {
-   background-color: #3ed9e4;
-   grid-area: nav;
-   font-size: 20px;
-   line-height: 2;
-   text-align: center;
-
-   grid-column: 2/3;
-}
-
-.content {
-   background-color: #10a9b4ad;
-   grid-area: content;
-   grid-column: 3/4;
-}
-
-.content__background {
-   height: 100px;
-   width: 100%;
-   margin-bottom: 20px;
-}
-.content__background img {
-   height: 100%;
-   width: 100%;
-}
-
-.user {
-   display: flex;
-}
-
-.user__allinfo {
-   padding: 0 0 0 20px;
-}
-
-.user__name {
-   font-size: 18px;
-   margin-bottom: 10px;
-}
-
-.user__info {
-   font-size: 14px;
-   line-height: 1.5;
-}
-
-.user__avatar {
-   width: 100px;
-}
-
-.user__avatar img {
-   width: 100%;
 }

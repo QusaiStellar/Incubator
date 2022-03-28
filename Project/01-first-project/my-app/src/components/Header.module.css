@@ -1,0 +1,15 @@
+.header {
+   background-color: #3f4257;
+   grid-area: header;
+   grid-column: 2/4;
+}
+
+.logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   font-size: 18px;
+}
+
+
