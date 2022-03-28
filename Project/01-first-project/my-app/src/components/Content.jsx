@@ -3,11 +3,11 @@ const Content = () => {
 
       <main className='content'>
          <div className='content__background'>
-            <img src={require('../img/main-bg.jpg')} />
+            <img src={require('../img/main-bg.jpg')} alt='bg' />
          </div>
          <div className='user'>
             <div className='user__avatar'>
-               <img src={require('../img/avatar.jpg')} />
+               <img src={require('../img/avatar.jpg')} alt='avatar' />
             </div>
             <div className='user__allinfo'>
                <div className='user__name'>Andrew Dobrik</div>
@@ -18,6 +18,7 @@ const Content = () => {
                      <li>Education: BNTU '18</li>
                      <li>Web-site: none</li>
                   </ul>
+
                </div>
             </div>
          </div>
