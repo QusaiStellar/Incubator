@@ -1,0 +1,30 @@
+
+.post {
+   display: flex;
+   margin-bottom: 20px;
+}
+
+.post_avatar {
+   flex: 0 0 70px;
+   text-align: center;
+}
+.post_avatar img {
+   width: 50px;
+   border-radius: 50%;
+}
+
+.post_item {
+   flex: 1 1 auto;
+}
+
+.post_nickname {
+   font-size: 16px;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+}
+
+.post_text {
+   font-size: 14px;
+   line-height: 1.5;
+}
