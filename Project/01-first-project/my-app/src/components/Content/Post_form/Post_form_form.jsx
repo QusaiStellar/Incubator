@@ -6,7 +6,7 @@ const Post_form = () => {
 
       <form className={styles.post_form}>
          <textarea className={styles.textarea_post}></textarea>
-         <a href="#" className={styles.send_btn}>Send</a>
+         <a href="#" className={styles.send_btn}><span>Send</span></a>
       </form>
    );
 }

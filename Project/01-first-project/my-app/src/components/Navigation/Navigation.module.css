@@ -1,8 +1,23 @@
 .navigation {
-   background-color: #fff;
+   background-color: #8B8B8C;
    grid-area: nav;
    font-size: 18px;
    grid-column: 2/3;
+}
+
+.active {
+   background: rgb(0, 212, 255);
+   background: linear-gradient(
+      90deg,
+      rgba(0, 212, 255, 0.25246072550113796) 0%,
+      rgba(63, 66, 87, 0.46254475911458337) 52%,
+      rgba(0, 212, 255, 0.25246072550113796) 100%
+   );
+}
+
+.navigation a:hover {
+   padding-right: 5px;
+   transition: 0.3s ease;
 }
 
 .navigation a {
@@ -13,4 +28,16 @@
    display: block;
    border-bottom: 1px solid #3f4257;
    text-transform: uppercase;
+   transition: 0.3s ease;
+}
+
+.navigation li a {
+   display: flex;
+   align-items: center;
+}
+.navigation li span {
+   flex: 1 1 auto;
+}
+.navigation li svg {
+   flex: 0 0 50px;
 }
