@@ -1,0 +1,14 @@
+.message {
+   display: flex;
+   justify-content: flex-end;
+   padding-bottom: 10px;
+   padding-left: 10%;
+   text-align: right;
+   word-break: break-all;
+}
+
+.message span {
+   border: 1px solid white;
+   border-radius: 5px;
+   padding: 5px;
+}

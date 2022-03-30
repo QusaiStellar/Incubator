@@ -99,6 +99,11 @@ html {
       "nav content";
    grid-template-rows: 60px 1fr;
    grid-template-columns: 1fr minmax(auto, 200px) 2fr 1fr;
-   grid-gap: 10px;
    min-height: 100%;
+}
+
+.app-wrapper-content {
+   background-color: #8b8b8c;
+   grid-area: content;
+   grid-column: 3/4;
 }
