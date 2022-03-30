@@ -1,21 +1,22 @@
 .navigation {
-   background-color: #8B8B8C;
    grid-area: nav;
    font-size: 18px;
    grid-column: 2/3;
+   background-color: #fff;
+   border-radius: 15px;
+   color: #999ba3;
 }
 
-.active {
-   background: rgb(0, 212, 255);
-   background: linear-gradient(
-      90deg,
-      rgba(0, 212, 255, 0.25246072550113796) 0%,
-      rgba(63, 66, 87, 0.46254475911458337) 52%,
-      rgba(0, 212, 255, 0.25246072550113796) 100%
-   );
+.active path,
+.active span {
+   fill: black;
+   color: black;
 }
 
-.navigation a:hover {
+.navigation a:hover path,
+.navigation a:hover span {
+   fill: black;
+   color: black;
    padding-right: 5px;
    transition: 0.3s ease;
 }

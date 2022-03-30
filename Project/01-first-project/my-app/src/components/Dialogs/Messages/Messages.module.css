@@ -10,8 +10,17 @@
    justify-content: center;
 }
 
-.dialog {
+.message_send {
+   margin-top: 20px;
 }
 
-.input_message {
+.textarea_message {
+   resize: none;
+   font-size: 14px;
+   padding: 10px 20px;
+   height: 50px;
+   width: 100%;
+   border-radius: 10px;
+   background-color: #d3e5f38a;
+   color: #3f4552;
 }

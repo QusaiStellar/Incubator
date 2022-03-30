@@ -4,7 +4,7 @@ import styles from './MessageFromMe.module.css';
 const MessageFromMe = (props) => {
    return (
       <div className={styles.message}>
-         <span>MessageFromMe</span>
+         <span>{props.message}</span>
       </div>
    );
 }

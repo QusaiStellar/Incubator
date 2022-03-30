@@ -7,8 +7,8 @@ import User from './User/User';
 
 const Content = () => {
    return (
-      <main>
-         <Background />
+      <main className={styles.profile}>
+         {/*<Background />*/}
          <User />
          <Post_form />
          <Posts />

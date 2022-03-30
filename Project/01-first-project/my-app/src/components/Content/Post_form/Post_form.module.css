@@ -12,15 +12,17 @@
    padding: 10px 20px;
    margin-bottom: 10px;
    border-radius: 10px;
-   background-color: #a6aacc;
+   background-color: #edf2f6;
+   color: #999ba3;
+
 }
 .send_btn {
    flex: 0 0 auto;
    display: flex;
    width: 100px;
    justify-content: center;
-   background-color: #3f4257;
-   color: #fff;
+   background-color: #edf2f6;
+   color: #999ba3;
    padding: 10px 20px;
    text-transform: uppercase;
    letter-spacing: 1px;

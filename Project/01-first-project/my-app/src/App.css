@@ -86,10 +86,13 @@ h6 {
    font-size: inherit;
    font-weight: inherit;
 }
+a:visited {
+   color: inherit;
+}
 
 /*======================================================================================*/
 html {
-   background-color: #595958;
+   background-color: #edf2f6;
 }
 
 .app-wrapper {
@@ -100,10 +103,12 @@ html {
    grid-template-rows: 60px 1fr;
    grid-template-columns: 1fr minmax(auto, 200px) 2fr 1fr;
    min-height: 100%;
+   gap: 10px;
 }
 
 .app-wrapper-content {
-   background-color: #8b8b8c;
+   background-color: #fff;
    grid-area: content;
    grid-column: 3/4;
+   border-radius: 15px;
 }

@@ -10,8 +10,8 @@ const Messages = (props) => {
             <div>Status</div>
          </div>
          <Dialog />
-         <div className={styles.input_message}>
-            <textarea />
+         <div className={styles.message_send}>
+            <textarea className={styles.textarea_message} />
          </div>
       </div>
    );

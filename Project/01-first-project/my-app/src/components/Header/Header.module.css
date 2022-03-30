@@ -1,13 +1,12 @@
 .header {
-   background-color: #8B8B8C;
+   background-color: #3f4552;
    grid-area: header;
-   grid-column: 2/4;
+   grid-column: 1/5;
    display: flex;
    justify-content: center;
    align-items: center;
 }
 
 .logo {
-   color: #fff;
    font-size: 18px;
 }

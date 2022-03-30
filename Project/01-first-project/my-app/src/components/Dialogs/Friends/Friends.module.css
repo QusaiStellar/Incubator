@@ -1,5 +1,7 @@
 .friends_wrapper {
    display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
 }
 
 .avatar {
@@ -7,10 +9,13 @@
    background-color: aqua;
    padding: 5px;
    flex: 0 0 50px;
+   max-height: 50px;
 }
 
 .nickname {
    display: inline-block;
    flex: 1 1 auto;
    padding-left: 10px;
+
+   word-break: break-all;
 }
