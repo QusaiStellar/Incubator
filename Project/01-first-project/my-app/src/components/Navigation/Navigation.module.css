@@ -1,11 +1,23 @@
 .navigation {
-   grid-area: nav;
    font-size: 18px;
-   grid-column: 2/3;
+   padding: 10px 30px 20px 30px;
+   margin-bottom: 20px;
    background-color: #fff;
    border-radius: 15px;
    color: #999ba3;
+   display: flex;
+   justify-content: space-between;
 }
+
+
+
+.navigation a:hover path,
+.navigation a:hover span {
+   fill: black;
+   color: black;
+   transition: 0.3s ease;
+}
+
 
 .active path,
 .active span {
@@ -13,32 +25,21 @@
    color: black;
 }
 
-.navigation a:hover path,
-.navigation a:hover span {
-   fill: black;
-   color: black;
-   padding-right: 5px;
-   transition: 0.3s ease;
-}
-
 .navigation a {
-   padding: 10px 0 10px 20px;
+   padding: 10px 0;
    letter-spacing: 1px;
-   height: 100%;
-   width: 100%;
-   display: block;
+   display: flex;
+   align-items: center;
+   gap: 10px;
    border-bottom: 1px solid #3f4257;
    text-transform: uppercase;
    transition: 0.3s ease;
+   color: inherit;
 }
 
-.navigation li a {
-   display: flex;
-   align-items: center;
-}
-.navigation li span {
+.navigation a span {
    flex: 1 1 auto;
 }
-.navigation li svg {
-   flex: 0 0 50px;
+.navigation a svg {
+   flex: 0 0 auto;
 }

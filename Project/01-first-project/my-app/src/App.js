@@ -1,5 +1,5 @@
 import './App.css';
-import Content from './components/Content/Content';
+import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
@@ -11,12 +11,13 @@ const App = () => {
          <div className='app-wrapper'>
             <Header />
             <Navigation />
-            <div className='app-wrapper-content'>
-               <Routes>
-                  <Route path='/dialogs' element={<Dialogs />} />
-                  <Route path='/profile' element={<Content />} />
-               </Routes >
-
+            <div className='container'>
+               <div className='app-wrapper-content'>
+                  <Routes>
+                     <Route path='/dialogs' element={<Dialogs />} />
+                     <Route path='/profile' element={<Profile />} />
+                  </Routes >
+               </div>
             </div>
          </div>
       </BrowserRouter>

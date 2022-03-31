@@ -6,8 +6,8 @@ const Messages = (props) => {
    return (
       <div className={styles.messages_wrapper}>
          <div className={styles.title}>
-            <div>Nickname</div>
-            <div>Status</div>
+            <div className={styles.nickname}>Nickname</div>
+            <div className={styles.status}>Status</div>
          </div>
          <Dialog />
          <div className={styles.message_send}>

@@ -63,6 +63,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
    text-decoration: none;
+   color: inherit;
 }
 
 a:hover {
@@ -91,24 +92,28 @@ a:visited {
 }
 
 /*======================================================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 html {
    background-color: #edf2f6;
 }
 
+body {
+   font-family: "Roboto", sans-serif;
+}
+
 .app-wrapper {
-   display: grid;
-   grid-template-areas:
-      "header header"
-      "nav content";
-   grid-template-rows: 60px 1fr;
-   grid-template-columns: 1fr minmax(auto, 200px) 2fr 1fr;
+   display: flex;
+   flex-direction: column;
    min-height: 100%;
-   gap: 10px;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
 .app-wrapper-content {
    background-color: #fff;
-   grid-area: content;
-   grid-column: 3/4;
    border-radius: 15px;
 }
