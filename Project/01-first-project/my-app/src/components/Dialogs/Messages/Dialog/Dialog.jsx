@@ -5,6 +5,9 @@ import MessageFromMe from './MessageFromMe/MessageFromMe';
 
 const Dialog = (props) => {
    return (
+
+
+      
       < div className={styles.dialog} >
          <MessageFromFriend message='Lorem ipsum dolor sit amet, consectetur adipisicing elit.' />
          <MessageFromMe message='Lorem ipsum dolor sit amet.' />

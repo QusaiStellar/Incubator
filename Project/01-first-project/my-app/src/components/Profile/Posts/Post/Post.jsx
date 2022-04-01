@@ -11,7 +11,7 @@ const Post = (props) => {
             <div className={styles.like_dislike}>
                <div className={styles.like}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7111 21H15.8769C17.7124 21 19.3123 19.7508 
+                     <path fillRule="evenodd" clipRule="evenodd" d="M12.7111 21H15.8769C17.7124 21 19.3123 19.7508 
                      19.7575 17.9701L21.3788 11.4851C21.6943 10.2228 20.7396 9 19.4385 9H14.5L15.8069 6.75968C16.7791
                       5.09303 15.5769 3 13.6474 3H12.5L8.63178 9.76943C8.54543 9.92052 8.50002 10.0915 8.50002 
                       10.2656V18.4648C8.50002 18.7992 8.66712 19.1114 8.94532 19.2969L10.4923 20.3282C11.1494
@@ -22,7 +22,7 @@ const Post = (props) => {
                   {props.like}</div>
                <div className={styles.dislike}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2889 3H8.12309C6.28761 3 4.68768 4.24919 
+                     <path fillRule="evenodd" clipRule="evenodd" d="M11.2889 3H8.12309C6.28761 3 4.68768 4.24919 
                      4.24252 6.02986L2.62125 12.5149C2.30567 13.7772 3.26039 15 4.56153 15H9.49998L8.19312 
                      17.2403C7.22092 18.907 8.42309 21 10.3526 21H11.5L15.3682 14.2306C15.4546 14.0795 
                      15.5 13.9085 15.5 13.7344V5.53518C15.5 5.20083 15.3329 4.8886 15.0547 4.70313L13.5077 

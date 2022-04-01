@@ -5,7 +5,7 @@ import styles from './Posts.module.css';
 
 const Posts = () => {
 
-   let postData = [
+   let postsData = [
       {
          id: 1, text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, voluptatum blanditiis, rerum odio vel nisi quaerat necessitatibus vitae facilis perspiciatis itaque doloremque iure nam porro illo in pariatur et ea?',
          like: 10, dislike: 2,
@@ -20,11 +20,11 @@ const Posts = () => {
       },
    ]
 
+   let postsElement = postsData.map(post => <Post id={post.id} text={post.text} like={post.like} dislike={post.dislike} />)
+
    return (
       <div className={styles.posts}>
-         <Post id={postData[0].id} text={postData[0].text} like={postData[0].like} dislike={postData[0].dislike} />
-         <Post id={postData[1].id} text={postData[1].text} like={postData[1].like} dislike={postData[1].dislike} />
-         <Post id={postData[2].id} text={postData[2].text} like={postData[2].like} dislike={postData[2].dislike} />
+         {postsElement}
       </div>
 
    );
