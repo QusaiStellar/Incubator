@@ -5,14 +5,20 @@ import Post_form from './Post_form/Post_form_form';
 import User from './User/User';
 
 
-const Profile = () => {
+
+
+
+
+const Profile = (props) => {
+
+
    return (
       <div className='container'>
          <main className={styles.profile}>
             {/*<Background />*/}
             <User />
             <Post_form />
-            <Posts />
+            <Posts postsData={props.postsData} />
          </main>
       </div>
    );

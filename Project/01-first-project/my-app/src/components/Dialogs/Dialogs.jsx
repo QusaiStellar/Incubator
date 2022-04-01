@@ -4,16 +4,9 @@ import styles from './Dialogs.module.css';
 const activeLink = ({ isActive }) => isActive ? styles.active : '';
 
 
-const Dialogs = () => {
+const Dialogs = (props) => {
 
-   let friendsData = [
-      { id: 1, nickname: "Anasteisha Dobrinskaya", },
-      { id: 2, nickname: "Vlad Bob", },
-      { id: 3, nickname: "Max Somov", },
-      { id: 4, nickname: "Yauheni Vasiluk", },
-   ];
-
-   let friends = friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
+   let friends = props.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
 
    return (
       <div className={styles.dialogs_wrapper}>
