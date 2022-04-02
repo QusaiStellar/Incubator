@@ -19,7 +19,7 @@ const Navigation = () => {
                 8.624C18.7607 8.39423 18.8538 7.92858 18.624 7.58393C18.3943 7.23929 17.9286 7.14616 
                 17.584 7.37592L13.8028 9.89672C12.7111 10.6245 11.2889 10.6245 10.1972 9.89672L6.41603 
                 7.37592Z" fill="#999ba3" />
-         </svg>         </NavLink>
+         </svg></NavLink>
          <NavLink to='/news' className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M11.25 4.37808C9.13095 2.92228 6.18953 2.25933 
                3.99433 2.01127C2.89642 1.88721 2 2.80402 2 3.93518V15.2C2 16.3311 2.89642 17.2483 3.99433 

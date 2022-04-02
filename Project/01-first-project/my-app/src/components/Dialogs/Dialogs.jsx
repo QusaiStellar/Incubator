@@ -3,12 +3,11 @@ import Friends from './Friends/Friends';
 import styles from './Dialogs.module.css';
 import { Route, Routes } from 'react-router-dom';
 
-const activeLink = isActive => isActive ? styles.active : '';
 
 
 const Dialogs = (props) => {
 
-   let friends = props.state.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} className={activeLink} />);
+   let friends = props.state.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
 
    return (
       <div className={styles.dialogs_wrapper}>
@@ -17,7 +16,7 @@ const Dialogs = (props) => {
          </div>
          <div className={styles.messages_wrapper}>
             <Routes>
-               <Route path='/*' element={<Messages />} />
+               <Route path='/' element={<Messages />} />
             </Routes>
          </div>
       </div>
