@@ -1,12 +1,26 @@
 .header {
    background-color: #3f4552;
+   padding: 10px;
+}
+
+
+.header_raw {
    display: flex;
-   justify-content: center;
+   flex-wrap: nowrap;
+   justify-content: space-between;
    align-items: center;
-   padding: 40px;
+   
 }
 
 .logo {
-   font-size: 18px;
-   color: wheat;
+
+}
+
+.icons {
+color: aliceblue;
+font-size: 28px;
+}
+
+.search {
+
 }

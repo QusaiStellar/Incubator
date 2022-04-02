@@ -1,12 +1,14 @@
 .navigation {
+   flex: 0 0 2%;
    font-size: 18px;
-   padding: 10px 30px 20px 30px;
+   padding: 20px;
    margin-bottom: 20px;
    background-color: #fff;
    border-radius: 15px;
    color: #999ba3;
    display: flex;
-   justify-content: space-between;
+   flex-direction: column;
+   gap: 50px;
 }
 
 
@@ -14,7 +16,6 @@
 .navigation a:hover path,
 .navigation a:hover span {
    fill: black;
-   color: black;
    transition: 0.3s ease;
 }
 
@@ -22,7 +23,6 @@
 .active path,
 .active span {
    fill: black;
-   color: black;
 }
 
 .navigation a {
@@ -31,7 +31,6 @@
    display: flex;
    align-items: center;
    gap: 10px;
-   border-bottom: 1px solid #3f4257;
    text-transform: uppercase;
    transition: 0.3s ease;
    color: inherit;

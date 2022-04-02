@@ -7,13 +7,17 @@
 
 .friends_wrapper {
    flex: 1 1 auto;
+   flex-wrap: wrap;
    display: flex;
-   gap: 10px;
+   gap: 30px;
    padding: 20px;
    font-size: 20px;
    border: 1px solid black;
    border-radius: 20px;
+   justify-content: space-between;
 }
+
+
 
 .messages_wrapper {
    border: 1px solid black;

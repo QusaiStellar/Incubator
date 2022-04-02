@@ -107,11 +107,20 @@ body {
    flex-direction: column;
    min-height: 100%;
 }
+.container {
+   max-width: 1200px;
+   margin: 0 auto; 
+}
 
 .app-wrapper-content {
+   display: flex;
    background-color: #fff;
    border-radius: 15px;
    max-width: 1200px;
    width: 100%;
    margin: 0 auto;
+}
+
+.changing-content {
+   flex: 1 1 auto;
 }

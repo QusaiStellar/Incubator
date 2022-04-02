@@ -1,19 +1,22 @@
-.friends_wrapper {
+.friend_wrapper {
    display: flex;
-   flex-wrap: nowrap;
    align-items: center;
+   justify-content: center;
+   width: 48%;
 }
 
 .avatar {
-   display: inline-block;
-   background-color: aqua;
    padding: 5px;
-   flex: 0 0 50px;
-   max-height: 50px;
+   flex: 0 0 20px;
+}
+.avatar img{
+   display: block;
+   width: 30px;
 }
 
 .nickname {
-   display: inline-block;
    flex: 1 1 auto;
    padding-left: 10px;
+   white-space: nowrap;
+   overflow: hidden;
 }
