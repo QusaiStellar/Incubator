@@ -6,7 +6,6 @@ import { Route, Routes } from 'react-router-dom';
 
 
 const Dialogs = (props) => {
-
    let friends = props.state.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
 
    return (
@@ -16,7 +15,7 @@ const Dialogs = (props) => {
          </div>
          <div className={styles.messages_wrapper}>
             <Routes>
-               <Route path='/' element={<Messages />} />
+               <Route path=':id' element={<Messages />} />
             </Routes>
          </div>
       </div>

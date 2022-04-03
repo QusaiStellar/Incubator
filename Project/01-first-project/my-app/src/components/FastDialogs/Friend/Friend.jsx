@@ -7,11 +7,9 @@ const activeLink = ({ isActive }) => isActive ? styles.active : '';
 const Friend = (props) => {
 
    return (
-      <div className={styles.friend_wrapper}>
-         <NavLink to={`/dialogs/${props.id}`} className={activeLink} >
-            <img src={avatar} alt="avatar" />
-         </NavLink >
-      </div>
+      <NavLink to={`/dialogs/${props.id}`} className={`${activeLink} ${styles.friend_wrapper}`} >
+         <img src={avatar} alt="avatar" />
+      </NavLink >
    );
 }
 

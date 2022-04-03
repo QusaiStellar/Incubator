@@ -1,11 +1,12 @@
 .friend_wrapper img {
    display: inline-block;
-   width: 100%;
+   max-width: 100%;
+   border-radius: 50%;
+
 }
 
-.active {
-   border: solid 1px black;
-   background-color: aqua;
+.active img{
+   max-width: 100%;
 }
 
 .friend_wrapper a {
