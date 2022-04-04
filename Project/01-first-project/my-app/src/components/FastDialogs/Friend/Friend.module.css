@@ -6,7 +6,7 @@
 }
 
 .active img{
-   max-width: 100%;
+border-bottom: 3px solid #3f4552;
 }
 
 .friend_wrapper a {

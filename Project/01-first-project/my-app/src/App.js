@@ -5,14 +5,13 @@ import Dialogs from './components/Dialogs/Dialogs';
 import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
 import NotFound from './components/NotFound/NotFound';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import FastDialog from './components/FastDialogs/FastDialogs';
 
 
 
 const App = () => {
    return (
-      <BrowserRouter>
          <div className='app-wrapper'>
             <Header />
             <div className='app-wrapper-content'>
@@ -27,7 +26,6 @@ const App = () => {
                <FastDialog state={state.dialogsPage.friendsData} />
             </div>
          </div>
-      </BrowserRouter>
    );
 }
 

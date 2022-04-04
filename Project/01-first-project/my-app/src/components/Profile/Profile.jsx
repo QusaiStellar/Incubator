@@ -1,13 +1,9 @@
 import Background from './Background/Background';
 import styles from './Profile.module.css';
 import Posts from './Posts/Posts';
-import Post_form from './Post_form/Post_form_form';
+import Post_form from './Post_form/Post_form';
 import User from './User/User';
 import React from "react";
-
-
-
-
 
 
 const Profile = (props) => {
