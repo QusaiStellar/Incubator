@@ -16,7 +16,7 @@
 .avatar img {
    display: block;
    width: 30px;
-   border-right: 50%;
+   border-radius: 50%;
 }
 
 .nickname {
