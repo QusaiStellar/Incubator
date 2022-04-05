@@ -33,3 +33,21 @@
    background-color: #d3e5f38a;
    color: #3f4552;
 }
+
+.send_btn {
+   flex: 0 0 auto;
+   display: flex;
+   width: 100px;
+   justify-content: center;
+   background-color: #edf2f6;
+   color: #999ba3;
+   padding: 10px 20px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+   border-radius: 10px;
+}
+.send_btn:hover {
+   letter-spacing: 3px;
+   transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}

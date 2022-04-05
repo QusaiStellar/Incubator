@@ -5,13 +5,18 @@
    width: 48%;
 }
 
+.friend_wrapper .active {
+   background-color: rgba(221, 221, 221, 0.904);
+}
+
 .avatar {
    padding: 5px;
    flex: 0 0 20px;
 }
-.avatar img{
+.avatar img {
    display: block;
    width: 30px;
+   border-right: 50%;
 }
 
 .nickname {

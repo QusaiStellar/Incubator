@@ -2,11 +2,15 @@
    display: inline-block;
    max-width: 100%;
    border-radius: 50%;
-
+   transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.active img{
-border-bottom: 3px solid #3f4552;
+.active img {
+   border-bottom: 3px solid #3f4552;
+}
+.friend_wrapper:hover img {
+   border-bottom: 3px solid #3f4552;
+   transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .friend_wrapper a {
