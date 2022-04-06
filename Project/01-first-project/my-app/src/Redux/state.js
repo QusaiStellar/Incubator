@@ -1,3 +1,5 @@
+import { rerenderAllTree } from "../render";
+
 let state = {
    profilePage: {
       postsData: [
@@ -26,6 +28,19 @@ let state = {
    }
 
 
+}
+
+export let addPost = (text) => {
+   let newPost = {
+      id: 4,
+      text: text,
+      like: 0,
+      dislike: 0,
+   };
+
+   state.profilePage.postsData.push(newPost);
+   rerenderAllTree(state);
+   alert('Пуш состоялся');
 }
 
 export default state;

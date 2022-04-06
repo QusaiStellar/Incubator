@@ -1,5 +1,4 @@
 import './App.css';
-import state from './Redux/state';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Header from './components/Header/Header';
@@ -10,7 +9,7 @@ import FastDialog from './components/FastDialogs/FastDialogs';
 
 
 
-const App = () => {
+const App = (props) => {
    return (
       <div className='app-wrapper'>
          <Header />
@@ -18,12 +17,12 @@ const App = () => {
             <Navigation />
             <div className='changing-content'>
                <Routes>
-                  <Route path='/dialogs/*' element={<Dialogs state={state.dialogsPage} />} />
-                  <Route path='/profile' element={<Profile state={state.profilePage} />} />
+                  <Route path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage} />} />
+                  <Route path='/profile' element={<Profile state={props.state.profilePage} addPost={props.addPost} />} />
                   <Route path='/*' element={<NotFound />} />
                </Routes >
             </div>
-            <FastDialog state={state.dialogsPage.friendsData} />
+            <FastDialog state={props.state.dialogsPage.friendsData} />
          </div>
       </div>
    );

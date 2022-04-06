@@ -13,7 +13,7 @@ const Profile = (props) => {
       <main className={styles.profile}>
          {/*<Background />*/}
          <User />
-         <Post_form />
+         <Post_form addPost={props.addPost} />
          <Posts postsData={props.state.postsData} />
       </main>
    );

@@ -3,11 +3,12 @@ import React from "react";
 
 
 
-const Post_form = () => {
+const Post_form = (props) => {
    let newPost = React.createRef();
    let addPost = () => {
       let text = newPost.current.value;
-      alert(text);
+      props.addPost(text);
+      newPost.current.value = '';
    }
    return (
 
