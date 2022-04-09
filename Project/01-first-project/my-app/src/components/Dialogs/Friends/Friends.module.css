@@ -1,13 +1,12 @@
-.friend_wrapper {
+.friends_wrapper {
    display: flex;
    align-items: center;
    justify-content: center;
    width: 48%;
+   position: relative;
 }
 
-.friend_wrapper .active {
-   background-color: rgba(221, 221, 221, 0.904);
-}
+
 
 .avatar {
    padding: 5px;
