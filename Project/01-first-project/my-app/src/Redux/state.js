@@ -16,6 +16,7 @@ let state = {
             like: 22, dislike: 1,
          },
       ],
+      newPostText: "asdasd"
    },
 
    dialogsPage: {
@@ -30,17 +31,23 @@ let state = {
 
 }
 
-export let addPost = (text) => {
+export let addPost = () => {
    let newPost = {
       id: 4,
-      text: text,
+      text: updateNewPostText(),
       like: 0,
       dislike: 0,
    };
 
    state.profilePage.postsData.push(newPost);
+   state.profilePage.newPostText = '';
    rerenderAllTree(state);
-   alert('Пуш состоялся');
+}
+
+export let updateNewPostText = (newText) => {
+   state.profilePage.newPostText = newText;
+   rerenderAllTree(state);
+
 }
 
 export default state;
