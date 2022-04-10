@@ -1,4 +1,3 @@
-import { rerenderAllTree } from "../render";
 
 let state = {
    profilePage: {
@@ -16,7 +15,7 @@ let state = {
             like: 22, dislike: 1,
          },
       ],
-      newPostText: "asdasd"
+      newPostText: ""
    },
 
    dialogsPage: {
@@ -30,11 +29,19 @@ let state = {
 
 
 }
+window.state = state
+
+let rerenderAllTree = () => {
+}
+
+export const subscriber = (observer) => {
+   rerenderAllTree = observer;
+}
 
 export let addPost = () => {
    let newPost = {
       id: 4,
-      text: updateNewPostText(),
+      text: state.profilePage.newPostText,
       like: 0,
       dislike: 0,
    };

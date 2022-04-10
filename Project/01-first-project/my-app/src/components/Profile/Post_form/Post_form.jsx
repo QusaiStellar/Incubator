@@ -4,6 +4,7 @@ import React from "react";
 
 
 const Post_form = (props) => {
+
    let newPost = React.createRef();
    let addPost = () => {
       props.addPost();
@@ -15,7 +16,7 @@ const Post_form = (props) => {
    return (
 
       <form className={styles.post_form}>
-         <textarea className={styles.textarea_post} ref={newPost} onChange={updateText} />
+         <textarea className={styles.textarea_post} ref={newPost} onChange={updateText} value={props.newPostText}/>
          <a href="#" className={styles.send_btn} onClick={addPost}><span>Send</span></a>
       </form>
    );

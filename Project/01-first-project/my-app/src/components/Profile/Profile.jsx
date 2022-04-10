@@ -6,10 +6,11 @@ import React from "react";
 
 
 const Profile = (props) => {
+
    return (
       <main className={styles.profile}>
          <User />
-         <Post_form addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>
+         <Post_form addPost={props.addPost} updateNewPostText={props.updateNewPostText} newPostText={props.state.newPostText} />
          <Posts postsData={props.state.postsData} />
       </main>
    );
