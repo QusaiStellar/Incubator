@@ -1,6 +1,7 @@
 import Dialog from './Dialog/Dialog';
 import styles from './Messages.module.css';
 import React from "react";
+import { Routes, Route } from 'react-router-dom';
 
 
 const Messages = (props) => {
@@ -15,7 +16,9 @@ const Messages = (props) => {
             <div className={styles.nickname}>Nickname</div>
             <div className={styles.status}>Status</div>
          </div>
-         <Dialog />
+         <Routes>
+            <Route path=':id' element={<Dialog />} />
+         </Routes>
          <div className={styles.message_send}>
             <textarea className={styles.textarea_message} ref={newMessage} />
             <a href="#" className={styles.send_btn} onClick={addMessage}><span>Send</span></a>

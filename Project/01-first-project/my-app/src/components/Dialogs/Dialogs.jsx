@@ -1,7 +1,6 @@
 import Messages from './Messages/Messages';
 import Friends from './Friends/Friends';
 import styles from './Dialogs.module.css';
-import { Route, Routes } from 'react-router-dom';
 
 
 
@@ -14,9 +13,7 @@ const Dialogs = (props) => {
             {friends}
          </div>
          <div className={styles.messages_wrapper}>
-            <Routes>
-               <Route path=':id' element={<Messages />} />
-            </Routes>
+            <Messages />
          </div>
       </div>
    );
