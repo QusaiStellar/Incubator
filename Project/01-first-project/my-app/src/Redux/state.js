@@ -1,7 +1,7 @@
 
 let store = {
 
-   state: {
+   _state: {
       profilePage: {
          postsData: [
             {
@@ -10,7 +10,7 @@ let store = {
             },
             {
                id: 2, text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-               like: 20, dislike: 4,
+               like: 40, dislike: 4,
             },
             {
                id: 3, text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ex cupiditate nulla, nam maxime sint odio eligendi aliquid necessitatibus ut?',
@@ -25,34 +25,37 @@ let store = {
             { id: 2, nickname: "Vlad Bob", },
             { id: 3, nickname: "Max Somov", },
             { id: 4, nickname: "Yauheni Vasiluk", },
+            { id: 5, nickname: "Max Martin", },
          ],
       }
    },
 
-   rerenderAllTree() {
+   getState() {
+      return this._state;
+   },
+
+   _callSubscriber() {
    },
 
    subscriber(observer) {
-      store.rerenderAllTree = observer;
+      this._callSubscriber = observer;
    },
 
    addPost() {
       let newPost = {
          id: 4,
-         text: store.state.profilePage.newPostText,
+         text: this._state.profilePage.newPostText,
          like: 0,
          dislike: 0,
       };
-      store.state.profilePage.postsData.push(newPost);
-      store.state.profilePage.newPostText = '';
-      store.rerenderAllTree(store.state);
+      this._state.profilePage.postsData.push(newPost);
+      this._state.profilePage.newPostText = '';
+      this._callSubscriber(this._state);
    },
-
    updateNewPostText(newText) {
 
-      store.state.profilePage.newPostText = newText;
-      debugger;
-      store.rerenderAllTree(store);
+      this._state.profilePage.newPostText = newText;
+      this._callSubscriber(this._state);
 
    }
 }

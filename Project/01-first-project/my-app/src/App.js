@@ -17,15 +17,15 @@ const App = (props) => {
             <Navigation />
             <div className='changing-content'>
                <Routes>
-                  <Route path='/dialogs/*' element={<Dialogs state={props.store.state.dialogsPage} />} />
-                  <Route path='/profile' element={<Profile state={props.store.state.profilePage}
-                     addPost={props.store.addPost}
-                     updateNewPostText={props.store.updateNewPostText}
+                  <Route exact path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage} />} />
+                  <Route path='/profile' element={<Profile state={props.state.profilePage}
+                     addPost={props.addPost}
+                     updateNewPostText={props.updateNewPostText}
                   />} />
                   <Route path='/*' element={<NotFound />} />
                </Routes >
             </div>
-            <FastDialog state={props.store.state.dialogsPage.friendsData} />
+            <FastDialog state={props.state.dialogsPage.friendsData} />
          </div>
       </div>
    );
