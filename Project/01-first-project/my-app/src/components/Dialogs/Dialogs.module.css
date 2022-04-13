@@ -6,7 +6,7 @@
 }
 
 .friends_wrapper {
-   flex: 1 1 auto;
+   flex: 0 0 auto;
    flex-wrap: wrap;
    display: flex;
    gap: 30px;
@@ -15,7 +15,9 @@
    border: 1px solid black;
    border-radius: 20px;
    justify-content: space-between;
+   width: 500px;
 }
+
 
 
 
