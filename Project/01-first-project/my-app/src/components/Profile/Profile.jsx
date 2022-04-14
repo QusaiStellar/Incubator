@@ -10,7 +10,7 @@ const Profile = (props) => {
    return (
       <main className={styles.profile}>
          <User />
-         <Post_form addPost={props.addPost} updateNewPostText={props.updateNewPostText} newPostText={props.state.newPostText} />
+         <Post_form dispatch={props.dispatch} newPostText={props.state.newPostText} />
          <Posts postsData={props.state.postsData} />
       </main>
    );

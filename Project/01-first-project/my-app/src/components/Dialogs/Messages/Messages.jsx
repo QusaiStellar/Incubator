@@ -21,7 +21,7 @@ const Messages = (props) => {
          </Routes>
          <div className={styles.message_send}>
             <textarea className={styles.textarea_message} ref={newMessage} />
-            <a href="#" className={styles.send_btn} onClick={addMessage}><span>Send</span></a>
+            <button href="#" className={styles.send_btn} onClick={addMessage}>Send</button>
          </div>
       </div>
    );
