@@ -38,7 +38,7 @@ let store = {
          like: 0,
          dislike: 0,
       };
-      this._state.profilePage.postsData.push(newPost);
+      this._state.profilePage.postsData.unshift(newPost);
       this._state.profilePage.newPostText = '';
       this._callSubscriber(this._state);
    },
