@@ -5,11 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 
 
 const Messages = (props) => {
-   let newMessage = React.createRef();
-   let addMessage = () => {
-      let text = newMessage.current.value;
-      alert(text);
-   }
+
    return (
       <div className={styles.messages_wrapper}>
          <div className={styles.title}>
@@ -17,12 +13,9 @@ const Messages = (props) => {
             <div className={styles.status}>Status</div>
          </div>
          <Routes>
-            <Route path=':id' element={<Dialog />} />
+            <Route path=':id' element={<Dialog state={props.state} dispatch={props.dispatch} />} />
          </Routes>
-         <div className={styles.message_send}>
-            <textarea className={styles.textarea_message} ref={newMessage} />
-            <button href="#" className={styles.send_btn} onClick={addMessage}>Send</button>
-         </div>
+
       </div>
    );
 }

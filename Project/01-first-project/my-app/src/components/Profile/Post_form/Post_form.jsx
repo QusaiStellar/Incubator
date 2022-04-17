@@ -1,5 +1,6 @@
 import styles from './Post_form.module.css';
 import React from "react";
+import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../Redux/state';
 
 
 
@@ -8,19 +9,18 @@ const Post_form = (props) => {
 
    let newPost = React.createRef();
    let addPost = () => {
-      props.dispatch({ type: 'ADD-POST' })
+      props.dispatch(addPostActionCreator());
    }
    let updateText = () => {
       let text = newPost.current.value;
-      props.dispatch({ type: 'UPDATE-NEW-POST-TEXT', newText: text });
+      props.dispatch(updateNewPostTextActionCreator(text));
    }
 
    return (
-
-      <form className={styles.post_form}>
+      <div className={styles.post_form}>
          <textarea className={styles.textarea_post} ref={newPost} onChange={updateText} value={props.newPostText} />
          <button href="#" className={styles.send_btn} onClick={addPost}>Send</button>
-      </form>
+      </div>
    );
 }
 
