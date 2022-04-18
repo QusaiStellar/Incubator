@@ -1,6 +1,6 @@
 import styles from './Post_form.module.css';
 import React from "react";
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../Redux/state';
+import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../Redux/profilePageReducer';
 
 
 

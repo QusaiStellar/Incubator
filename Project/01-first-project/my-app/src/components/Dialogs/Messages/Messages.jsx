@@ -15,7 +15,6 @@ const Messages = (props) => {
          <Routes>
             <Route path=':id' element={<Dialog state={props.state} dispatch={props.dispatch} />} />
          </Routes>
-
       </div>
    );
 }

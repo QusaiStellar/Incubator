@@ -1,7 +1,7 @@
 import styles from './Dialog.module.css';
 import MessageFromFriend from './MessageFromFriend/MessageFromFriend';
 import MessageFromMe from './MessageFromMe/MessageFromMe';
-import { addMessageActionCreator, updateNewMessageTextActionCreator } from '../../../../Redux/state';
+import { addMessageActionCreator, updateNewMessageTextActionCreator } from '../../../../Redux/dialogsPageReducer';
 import React from "react";
 
 
