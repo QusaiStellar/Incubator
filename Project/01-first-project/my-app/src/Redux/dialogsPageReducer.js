@@ -1,8 +1,30 @@
 const ADD_MESSAGE = 'ADD-MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
+let initialState = {
+   friendsData: [
+      { id: 1, nickname: "Anasteisha Dobrinskaya", },
+      { id: 2, nickname: "Vlad Bob", },
+      { id: 3, nickname: "Max Somov", },
+      { id: 4, nickname: "Yauheni Vasiluk", },
+      { id: 5, nickname: "Max Martin", },
+   ],
+   messagesFromMe: [
+      { id: 1, messageText: 'Lorem asdkk kkaksl!' },
+      { id: 2, messageText: 'Lorem asdkk kkaksl!' },
+      { id: 3, messageText: 'Lorem asdkk kkaksl!' },
+      { id: 4, messageText: 'Lorem asdkk kkaksl!' },
+   ],
+   messagesFromFriend: [
+      { id: 1, messageText: 'Lorem asdkk kkaksl!' },
+      { id: 2, messageText: 'Lorem asdkk kkaksl!' },
+      { id: 3, messageText: 'Lorem asdkk kkaksl!' },
+      { id: 4, messageText: 'Lorem asdkk kkaksl!' },
+   ],
+   newMessageText: '',
+}
 
-const dialogsPageReducer = (state, action) => {
+const dialogsPageReducer = (state = initialState, action) => {
    switch (action.type) {
 
       case ADD_MESSAGE:

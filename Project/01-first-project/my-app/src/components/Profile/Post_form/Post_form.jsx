@@ -6,14 +6,15 @@ import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../R
 
 const Post_form = (props) => {
 
-
    let newPost = React.createRef();
    let addPost = () => {
       props.dispatch(addPostActionCreator());
    }
    let updateText = () => {
+
       let text = newPost.current.value;
       props.dispatch(updateNewPostTextActionCreator(text));
+
    }
 
    return (

@@ -1,10 +1,9 @@
 import './index.css';
 import App from './App';
-import store from './Redux/state';
+import store from './Redux/redux-store';
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 
 let rerenderAllTree = (state) => {
 
@@ -23,4 +22,7 @@ let rerenderAllTree = (state) => {
 };
 
 rerenderAllTree(store.getState());
-store.subscriber(rerenderAllTree);
+store.subscribe(() => {
+   let state = store.getState();
+   rerenderAllTree(state);
+});
