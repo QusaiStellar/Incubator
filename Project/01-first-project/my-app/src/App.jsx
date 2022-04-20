@@ -10,6 +10,7 @@ import FastDialog from './components/FastDialogs/FastDialogs';
 
 
 const App = (props) => {
+
    return (
       <div className='app-wrapper'>
          <Header />
