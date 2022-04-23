@@ -1,6 +1,5 @@
 import styles from './Post_form.module.css';
 import React from "react";
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../Redux/profilePageReducer';
 
 
 
@@ -8,12 +7,12 @@ const Post_form = (props) => {
 
    let newPost = React.createRef();
    let addPost = () => {
-      props.dispatch(addPostActionCreator());
+      props.addPostActionCreator();
    }
    let updateText = () => {
 
       let text = newPost.current.value;
-      props.dispatch(updateNewPostTextActionCreator(text));
+      props.updateNewPostTextActionCreator(text);
 
    }
 

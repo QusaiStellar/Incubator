@@ -6,13 +6,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 let rerenderAllTree = (state) => {
-
    ReactDOM.render(
       <React.StrictMode>
          <BrowserRouter>
             <App
                state={state}
                dispatch={store.dispatch.bind(store)}
+               store={store}
             />
          </BrowserRouter>
       </React.StrictMode>,

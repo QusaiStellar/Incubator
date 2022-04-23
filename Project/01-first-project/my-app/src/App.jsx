@@ -10,7 +10,6 @@ import FastDialog from './components/FastDialogs/FastDialogs';
 
 
 const App = (props) => {
-
    return (
       <div className='app-wrapper'>
          <Header />
@@ -18,10 +17,12 @@ const App = (props) => {
             <Navigation />
             <div className='changing-content'>
                <Routes>
-                  <Route exact path='/dialogs/*' element={<Dialogs state={props.state.dialogsPage} dispatch={props.dispatch} />} />
-                  <Route path='/profile' element={<Profile state={props.state.profilePage}
-                     dispatch={props.dispatch} />} />
-                  <Route path='/*' element={<NotFound />} />
+                  <Route exact path='/dialogs/*'
+                     element={<Dialogs store={props.store} />} />
+                  <Route path='/profile'
+                     element={<Profile store={props.store} />} />
+                  <Route path='/*'
+                     element={<NotFound />} />
                </Routes >
             </div>
             <FastDialog state={props.state.dialogsPage.friendsData} />
