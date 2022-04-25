@@ -1,17 +1,18 @@
 import { NavLink } from 'react-router-dom';
+
 import styles from './Navigation.module.css';
 const activeLink = ({ isActive }) => isActive ? styles.active : '';
 
 const Navigation = () => {
    return (
       <nav className={styles.navigation}>
-         <NavLink to='/profile' className={activeLink}> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <NavLink to="/profile" className={activeLink}> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 
                   14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11ZM12 21C15.866 21 19 19.2091 
                   19 17C19 14.7909 15.866 13 12 13C8.13401 13 5 14.7909 5 17C5 19.2091 8.13401 21 12 21Z"
                fill="#999ba3" />
          </svg></NavLink>
-         <NavLink to='/dialogs' className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <NavLink to="/dialogs" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M6 3C3.79086 3 2 4.79086 2 7V17C2 19.2091
                 3.79086 21 6 21H18C20.2091 21 22 19.2091 22 17V7C22 4.79086 20.2091 3 18 3H6ZM6.41603 
                 7.37592C6.07138 7.14616 5.60573 7.23929 5.37597 7.58393C5.1462 7.92858 5.23933 8.39423 
@@ -20,7 +21,7 @@ const Navigation = () => {
                 17.584 7.37592L13.8028 9.89672C12.7111 10.6245 11.2889 10.6245 10.1972 9.89672L6.41603 
                 7.37592Z" fill="#999ba3" />
          </svg></NavLink>
-         <NavLink to='/news' className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <NavLink to="/news" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M11.25 4.37808C9.13095 2.92228 6.18953 2.25933 
                3.99433 2.01127C2.89642 1.88721 2 2.80402 2 3.93518V15.2C2 16.3311 2.89642 17.2483 3.99433 
                17.3723C6.18953 17.6204 9.13095 18.2833 11.25 19.7391V4.37808ZM12.75 19.7391C14.869 18.2833 
@@ -34,7 +35,7 @@ const Navigation = () => {
                 7.18346 10.9313C6.47445 10.7524 5.7745 10.6158 5.11477 10.5136Z" fill="#999ba3" />
          </svg>
          </NavLink>
-         <NavLink to='/music' className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <NavLink to="/music" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M12.25 4C12.25 2.55087 13.4891 1.09343 15.1648 
                1.52004C18.9498 2.48363 21.75 5.91386 21.75 10C21.75 11.159 21.5243 12.2671 21.1137 13.2814C20.999 
                13.5646 20.724 13.75 20.4185 13.75C20.1129 13.75 19.8379 13.5646 19.7233 13.2814C19.1709 11.9168 
@@ -43,7 +44,7 @@ const Navigation = () => {
                11.25 11.1984 11.9737 12.25 13.127V4Z" fill="#999ba3" />
          </svg>
          </NavLink>
-         <NavLink to='/settings' className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <NavLink to="/settings" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M16.3333 3.5C15.0447 3.5 14 4.54467 14 
                5.83333V8.16667C14 9.45533 15.0447 10.5 16.3333 10.5H18.6667C19.9553 10.5 21 9.45533 21 
                8.16667V5.83333C21 4.54467 19.9553 3.5 18.6667 3.5H16.3333ZM5.33333 13.5C4.04467 13.5 3 14.5447 3 
@@ -57,6 +58,6 @@ const Navigation = () => {
          </NavLink>
       </nav >
    );
-}
+};
 
 export default Navigation;

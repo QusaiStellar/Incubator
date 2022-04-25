@@ -6,7 +6,7 @@ import styles from './Dialogs.module.css';
 
 const Dialogs = (props) => {
 
-   let friends = props.store.getState().dialogsPage.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
+   const friends = props.store.getState().dialogsPage.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
 
    return (
       <main>
@@ -21,6 +21,6 @@ const Dialogs = (props) => {
          </div>
       </main>
    );
-}
+};
 
 export default Dialogs;

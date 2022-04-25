@@ -1,13 +1,14 @@
-import { combineReducers, legacy_createStore as createStore } from "redux";
-import dialogsPageReducer from "./dialogsPageReducer";
-import profilePageReducer from "./profilePageReducer";
+import { combineReducers, legacy_createStore as createStore } from 'redux';
 
-let reducers = combineReducers({
+import dialogsPageReducer from './dialogsPageReducer';
+import profilePageReducer from './profilePageReducer';
+
+const reducers = combineReducers({
    profilePage: profilePageReducer,
    dialogsPage: dialogsPageReducer,
 });
 
-let store = createStore(reducers);
+const store = createStore(reducers);
 
 export default store;
 

@@ -1,14 +1,14 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-let initialState = {
+const initialState = {
    postsData: [
       {
          id: 1, text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, voluptatum blanditiis, rerum odio vel nisi quaerat necessitatibus vitae facilis perspiciatis itaque doloremque iure nam porro illo in pariatur et ea?',
          like: 10, dislike: 2,
       },
       {
-         id: 2, text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+         id: 2, text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
          like: 40, dislike: 4,
       },
       {
@@ -16,15 +16,15 @@ let initialState = {
          like: 22, dislike: 1,
       },
    ],
-   newPostText: "",
-}
+   newPostText: '',
+};
 
 const profilePageReducer = (state = initialState, action) => {
 
    switch (action.type) {
 
       case ADD_POST:
-         let newPost = {
+         const newPost = {
             id: 4,
             text: state.newPostText,
             like: 0,
@@ -43,16 +43,16 @@ const profilePageReducer = (state = initialState, action) => {
       default:
          return state;
    }
-}
+};
 
 export const addPostActionCreator = () => {
-   return { type: ADD_POST }
-}
+   return { type: ADD_POST };
+};
 export const updateNewPostTextActionCreator = (text) => {
    return {
       type: UPDATE_NEW_POST_TEXT,
       newText: text,
-   }
-}
+   };
+};
 
 export default profilePageReducer;

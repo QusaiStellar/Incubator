@@ -1,20 +1,21 @@
+import React from 'react';
+
 import styles from './Post_form.module.css';
-import React from "react";
 
 
 
 const Post_form = (props) => {
 
-   let newPost = React.createRef();
-   let addPost = () => {
+   const newPost = React.createRef();
+   const addPost = () => {
       props.addPostActionCreator();
-   }
-   let updateText = () => {
+   };
+   const updateText = () => {
 
-      let text = newPost.current.value;
+      const text = newPost.current.value;
       props.updateNewPostTextActionCreator(text);
 
-   }
+   };
 
    return (
       <div className={styles.post_form}>
@@ -22,6 +23,6 @@ const Post_form = (props) => {
          <button href="#" className={styles.send_btn} onClick={addPost}>Send</button>
       </div>
    );
-}
+};
 
 export default Post_form;

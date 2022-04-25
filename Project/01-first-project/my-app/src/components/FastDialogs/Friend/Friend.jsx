@@ -1,6 +1,8 @@
-import styles from './Friend.module.css';
-import avatar from '../../../img/avatar.jpg';
 import { NavLink } from 'react-router-dom';
+
+import avatar from '../../../img/avatar.jpg';
+
+import styles from './Friend.module.css';
 const activeLink = ({ isActive }) => isActive ? styles.active : '';
 
 
@@ -13,7 +15,7 @@ const Friend = (props) => {
          </NavLink >
       </div>
    );
-}
+};
 
 export default Friend;
 

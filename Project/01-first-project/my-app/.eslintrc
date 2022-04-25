@@ -14,10 +14,6 @@
          "warn",
          "prefer-double"
       ],
-      "indent": [
-         "warn",
-         2
-      ],
       "comma-dangle": [
          "warn",
          "always-multiline"

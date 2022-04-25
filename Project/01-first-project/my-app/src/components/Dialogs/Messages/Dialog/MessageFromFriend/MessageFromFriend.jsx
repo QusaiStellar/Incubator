@@ -7,6 +7,6 @@ const MessageFromFriend = (props) => {
          <span>{props.message}</span>
       </div>
    );
-}
+};
 
 export default MessageFromFriend;

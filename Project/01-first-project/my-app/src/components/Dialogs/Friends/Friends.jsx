@@ -1,6 +1,8 @@
-import styles from './Friends.module.css';
 import { NavLink } from 'react-router-dom';
+
 import avatar from '../../../img/avatar.jpg';
+
+import styles from './Friends.module.css';
 
 
 const Friends = (props) => {
@@ -10,6 +12,6 @@ const Friends = (props) => {
          <div className={styles.nickname}>{props.nickname}</div>
       </NavLink>
    );
-}
+};
 
 export default Friends;

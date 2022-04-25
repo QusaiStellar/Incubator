@@ -1,8 +1,8 @@
-import dialogsPageReducer from "./dialogsPageReducer";
-import profilePageReducer from "./profilePageReducer";
+import dialogsPageReducer from './dialogsPageReducer';
+import profilePageReducer from './profilePageReducer';
 
 
-let store = {
+const store = {
 
    _state: {
       profilePage: {
@@ -12,7 +12,7 @@ let store = {
                like: 10, dislike: 2,
             },
             {
-               id: 2, text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+               id: 2, text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
                like: 40, dislike: 4,
             },
             {
@@ -20,15 +20,15 @@ let store = {
                like: 22, dislike: 1,
             },
          ],
-         newPostText: "",
+         newPostText: '',
       },
       dialogsPage: {
          friendsData: [
-            { id: 1, nickname: "Anasteisha Dobrinskaya", },
-            { id: 2, nickname: "Vlad Bob", },
-            { id: 3, nickname: "Max Somov", },
-            { id: 4, nickname: "Yauheni Vasiluk", },
-            { id: 5, nickname: "Max Martin", },
+            { id: 1, nickname: 'Anasteisha Dobrinskaya' },
+            { id: 2, nickname: 'Vlad Bob' },
+            { id: 3, nickname: 'Max Somov' },
+            { id: 4, nickname: 'Yauheni Vasiluk' },
+            { id: 5, nickname: 'Max Martin' },
          ],
          messagesFromMe: [
             { id: 1, messageText: 'Lorem asdkk kkaksl!' },
@@ -43,7 +43,7 @@ let store = {
             { id: 4, messageText: 'Lorem asdkk kkaksl!' },
          ],
          newMessageText: '',
-      }
+      },
    },
 
    _callSubscriber() {
@@ -66,6 +66,6 @@ let store = {
       this._callSubscriber = observer;
    },
 
-}
+};
 
 export default store;
