@@ -7,6 +7,6 @@ const NotFound = () => {
          <div className={styles.not_found}>Not Found 404</div>
       </div>
    );
-}
+};
 
 export default NotFound;

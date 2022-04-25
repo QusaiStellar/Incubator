@@ -16,7 +16,7 @@ const Dialogs = (props) => {
             </div>
 
             <div className={styles.messages_wrapper}>
-               <Messages state={props.store.getState().dialogsPage} dispatch={props.dispatch} />
+               <Messages store={props.store} />
             </div>
          </div>
       </main>

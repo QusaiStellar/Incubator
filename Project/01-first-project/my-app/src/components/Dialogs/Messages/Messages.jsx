@@ -1,7 +1,7 @@
-import Dialog from './Dialog/Dialog';
 import styles from './Messages.module.css';
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
+import Dialog_container from './Dialog/Dialog_container';
 
 
 const Messages = (props) => {
@@ -13,7 +13,7 @@ const Messages = (props) => {
             <div className={styles.status}>Status</div>
          </div>
          <Routes>
-            <Route path=':id' element={<Dialog state={props.state} dispatch={props.dispatch} />} />
+            <Route path=':id' element={<Dialog_container store={props.store} />} />
          </Routes>
       </div>
    );
