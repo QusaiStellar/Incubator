@@ -24,7 +24,7 @@ const App = (props) => {
                      element={<Profile store={props.store} />} />
                   <Route path="/*"
                      element={<NotFound />} />
-               </Routes >
+               </Routes>
             </div>
             <FastDialog state={props.state.dialogsPage.friendsData} />
          </div>

@@ -20,15 +20,15 @@ const Dialog = (props) => {
 
    return (
       <div>
-         < div className={styles.dialog} >
+         <div className={styles.dialog}>
             {messageFromFriendElement}
             {messageFromMeElement}
-         </ div>
+         </div>
          <div className={styles.message_send}>
             <textarea className={styles.textarea_message} onChange={updateText} ref={newMessage} value={props.state.newMessageText} placeholder="Enter your message" />
             <button href="#" className={styles.send_btn} onClick={addMessage} type="submit">Send</button>
          </div>
-      </ div>
+      </div>
    );
 };
 
