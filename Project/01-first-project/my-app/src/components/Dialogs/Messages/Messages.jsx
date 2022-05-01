@@ -5,7 +5,7 @@ import styles from './Messages.module.css';
 import DialogContainer from './Dialog/DialogContainer';
 
 
-const Messages = (props) => {
+const Messages = () => {
 
    return (
       <div className={styles.messages_wrapper}>
@@ -14,7 +14,7 @@ const Messages = (props) => {
             <div className={styles.status}>Status</div>
          </div>
          <Routes>
-            <Route path=":id" element={<DialogContainer store={props.store} />} />
+            <Route path=":id" element={<DialogContainer />} />
          </Routes>
       </div>
    );

@@ -6,7 +6,7 @@ import styles from './Dialogs.module.css';
 
 const Dialogs = (props) => {
 
-   const friends = props.store.getState().dialogsPage.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
+   const friends = props.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
 
    return (
       <main>
@@ -16,7 +16,7 @@ const Dialogs = (props) => {
             </div>
 
             <div className={styles.messages_wrapper}>
-               <Messages store={props.store} />
+               <Messages />
             </div>
          </div>
       </main>
