@@ -9,14 +9,14 @@ import MessageFromMe from './MessageFromMe/MessageFromMe';
 const Dialog = (props) => {
    const newMessage = React.createRef();
    const addMessage = () => {
-      props.addMessageActionCreator();
+      props.addMessage();
    };
    const updateText = () => {
       const text = newMessage.current.value;
-      props.updateNewMessageTextActionCreator(text);
+      props.updateNewMessageText(text);
    };
-   const messageFromMeElement = props.state.messagesFromMe.map(message => <MessageFromMe id={message.id} message={message.messageText} />);
-   const messageFromFriendElement = props.state.messagesFromFriend.map(message => <MessageFromFriend id={message.id} message={message.messageText} />);
+   const messageFromMeElement = props.state.messagesFromMe.map(message => <MessageFromMe id={message.id} key={message.id} message={message.messageText} />);
+   const messageFromFriendElement = props.state.messagesFromFriend.map(message => <MessageFromFriend id={message.id} key={message.id} message={message.messageText} />);
 
    return (
       <div>

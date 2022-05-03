@@ -1,0 +1,52 @@
+.wrapper {
+   padding: 10px;
+   display: flex;
+   flex: 1 1 33%;
+}
+.avatar {
+   display: flex;
+   flex-direction: column;
+   width: 100px;
+   align-items: center;
+   justify-content: center;
+}
+.userAvatar {
+   margin-bottom: 10px;
+}
+.btn {
+   padding: 5px;
+}
+.allInfo {
+   display: flex;
+   flex: 1 1 100%;
+}
+.userInfo {
+   display: flex;
+   flex: 1 1 50%;   
+   flex-direction: column;
+}
+.fullName {
+   font-size: 20px;
+   margin-bottom: 10px;
+   align-items: flex-start;
+}
+
+.status {
+font-size: 14px;
+}
+
+
+.location {
+   display: flex;
+   flex-direction: column;
+}
+
+.country {
+   font-size: 16px;
+   font-weight: 500;
+   margin-bottom: 10px; 
+}
+
+.city {
+
+}

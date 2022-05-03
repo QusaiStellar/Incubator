@@ -8,16 +8,16 @@ import styles from './Post_form.module.css';
 
 
 const PostForm = (props) => {
-   const postsElement = props.postsData.map(post => <Post id={post.id} text={post.text} like={post.like} dislike={post.dislike} />);
+   const postsElement = props.postsData.map(post => <Post id={post.id} key={post.id} text={post.text} like={post.like} dislike={post.dislike} />);
 
    const newPost = React.createRef();
    const addPost = () => {
-      props.addPostActionCreator();
+      props.addPost();
    };
    const updateText = () => {
 
       const text = newPost.current.value;
-      props.updateNewPostTextActionCreator(text);
+      props.updateNewPostText(text);
 
    };
 

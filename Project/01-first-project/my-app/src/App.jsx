@@ -7,10 +7,9 @@ import Header from './components/Header/Header';
 import Navigation from './components/Navigation/Navigation';
 import NotFound from './components/NotFound/NotFound';
 import FastDialogsContainer from './components/FastDialogs/FastDialogsContainer';
+import UsersContainer from './components/Users/UsersContainer';
 
-
-
-const App = (props) => {
+const App = () => {
    return (
       <div className="app-wrapper">
          <Header />
@@ -22,6 +21,8 @@ const App = (props) => {
                      element={<DialogsContainer />} />
                   <Route path="/profile"
                      element={<Profile />} />
+                  <Route path="/users"
+                     element={<div className="users-wrapper"><UsersContainer /></div>} />
                   <Route path="/*"
                      element={<NotFound />} />
                </Routes>

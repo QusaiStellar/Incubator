@@ -127,5 +127,9 @@ body {
 
 .changing-content {
    flex: 1 1 auto;
+}
 
+.users-wrapper {
+   display: flex;
+   flex: 1 1 33%;
 }

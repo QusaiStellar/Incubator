@@ -23,23 +23,25 @@ const profilePageReducer = (state = initialState, action) => {
 
    switch (action.type) {
 
-      case ADD_POST:
+      case ADD_POST: {
          const newPost = {
             id: 4,
             text: state.newPostText,
             like: 0,
             dislike: 0,
          };
-         state.postsData.unshift(newPost);
-         state.newPostText = '';
-         return state;
-
-      case UPDATE_NEW_POST_TEXT:
-
-         state.newPostText = action.newText;
-
-         return state;
-
+         return {
+            ...state,
+            postsData: [newPost, ...state.postsData],
+            newPostText: '',
+         };
+      }
+      case UPDATE_NEW_POST_TEXT: {
+         return {
+            ...state,
+            newPostText: action.newText,
+         };
+      }
       default:
          return state;
    }
