@@ -22,7 +22,7 @@ const App = () => {
                   <Route path="/profile"
                      element={<Profile />} />
                   <Route path="/users"
-                     element={<div className="users-wrapper"><UsersContainer /></div>} />
+                     element={<section><div className="users-wrapper"><UsersContainer /></div></section>} />
                   <Route path="/*"
                      element={<NotFound />} />
                </Routes>

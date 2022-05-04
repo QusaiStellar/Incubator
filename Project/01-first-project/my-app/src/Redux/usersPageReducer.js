@@ -3,23 +3,12 @@ const UNFOLLOW = 'UNFOLLOW';
 const SETUSERS = 'SETUSERS';
 
 const initialState = {
-   users: [
-      {
-         id: 1, fullName: 'Andrew', status: 'Hello', location: { city: 'Minsk', country: 'Belarus' }, followed: true,
-      },
-      {
-         id: 2, fullName: 'Anasteisha', status: 'Girlfriend', location: { city: 'Minsk', country: 'Belarus' }, followed: true,
-      },
-      {
-         id: 3, fullName: 'Max', status: 'Friend', location: { city: 'Minsk', country: 'Belarus' }, followed: false,
-      },
-   ],
+   users: [],
 };
-
 const usersPageReducer = (state = initialState, action) => {
 
    switch (action.type) {
-      case FOLLOW: {
+      case FOLLOW:
          return {
             ...state,
             users: state.users.map(u => {
@@ -29,8 +18,7 @@ const usersPageReducer = (state = initialState, action) => {
                return u;
             }),
          };
-      }
-      case UNFOLLOW: {
+      case UNFOLLOW:
          return {
             ...state,
             users: state.users.map(u => {
@@ -40,13 +28,11 @@ const usersPageReducer = (state = initialState, action) => {
                return u;
             }),
          };
-      }
-      case SETUSERS: {
+      case SETUSERS:
          return {
             ...state,
             users: action.users,
          };
-      }
       default:
          return state;
    }
@@ -61,5 +47,4 @@ export const unfollowAC = (userId) => {
 export const setUsersAC = (users) => {
    return { type: SETUSERS, users };
 };
-
 export default usersPageReducer;

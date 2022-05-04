@@ -1,29 +1,40 @@
 .wrapper {
-   padding: 10px;
+   margin-top: 10px;
+   padding: 20px;
+   border-radius: 10px;
    display: flex;
-   flex: 1 1 33%;
+   flex: 1 1 50%;
+   background-color: #edf2f6;
+   max-width: 100%;
 }
 .avatar {
    display: flex;
+   flex: 0 0 100px;
    flex-direction: column;
    width: 100px;
    align-items: center;
    justify-content: center;
+   margin-right: 10px;
 }
 .userAvatar {
    margin-bottom: 10px;
 }
 .btn {
    padding: 5px;
+   border: black solid 1px;
+   border-radius: 5px;
 }
 .allInfo {
    display: flex;
-   flex: 1 1 100%;
+   flex: 1 1 auto;
+   
+   word-break: break-all;
 }
 .userInfo {
    display: flex;
-   flex: 1 1 50%;   
+   flex:1 1 auto;   
    flex-direction: column;
+   overflow: hidden;
 }
 .fullName {
    font-size: 20px;
@@ -38,6 +49,8 @@ font-size: 14px;
 
 .location {
    display: flex;
+   flex: 0 0 80px;
+
    flex-direction: column;
 }
 

@@ -20,6 +20,10 @@ const Dialog = (props) => {
 
    return (
       <div>
+         <div className={styles.title}>
+            <div className={styles.nickname}>Nickname</div>
+            <div className={styles.status}>Status</div>
+         </div>
          <div className={styles.dialog}>
             {messageFromFriendElement}
             {messageFromMeElement}
