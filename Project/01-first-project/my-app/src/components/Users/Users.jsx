@@ -1,6 +1,7 @@
 import React from 'react';
 import * as axios from 'axios';
 
+import userImg from '../../img/avatar.jpg'
 
 import styles from './Users.module.css';
 
@@ -15,12 +16,12 @@ const Users = (props) => {
       props.users.map(users =>
          <section className={styles.wrapper}>
             <div className={styles.avatar}>
-               <div className={styles.userAvatar}>Avatar</div>
+               <img src={users.photos.small != null ? users.photos.small : userImg} className={styles.userAvatar} alt="avatar" />
                <button onClick={users.followed ? () => { props.unfollow(users.id); } : () => { props.follow(users.id); }} className={styles.btn}>{users.followed ? 'Unfollow' : 'Follow'}</button>
             </div>
             <div className={styles.allInfo}>
                <div className={styles.userInfo}>
-                  <p className={styles.fullName}>{users.fullName}</p>
+                  <p className={styles.fullName}>{users.name}</p>
                   <p className={styles.status}>{users.status}</p>
                </div>
                <div className={styles.location}>

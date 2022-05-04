@@ -14,7 +14,6 @@ const Dialogs = (props) => {
             <div className={styles.friends_wrapper}>
                {friends}
             </div>
-
             <div className={styles.messages_wrapper}>
                <Messages />
             </div>
