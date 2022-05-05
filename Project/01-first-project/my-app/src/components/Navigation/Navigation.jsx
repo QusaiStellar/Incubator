@@ -1,28 +1,31 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './Navigation.module.css';
 const activeLink = ({ isActive }) => isActive ? styles.active : '';
 
-const Navigation = () => {
-   return (
-      <nav className={styles.navigation}>
-         <NavLink to="/profile" className={activeLink}> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 
+class Navigation extends React.Component {
+   render = () => {
+
+      return (
+         <nav className={styles.navigation}>
+            <NavLink to="/profile" className={activeLink}> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fillRule="evenodd" clipRule="evenodd" d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 
                   14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11ZM12 21C15.866 21 19 19.2091 
                   19 17C19 14.7909 15.866 13 12 13C8.13401 13 5 14.7909 5 17C5 19.2091 8.13401 21 12 21Z"
-               fill="#999ba3" />
-         </svg></NavLink>
-         <NavLink to="/dialogs" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M6 3C3.79086 3 2 4.79086 2 7V17C2 19.2091
+                  fill="#999ba3" />
+            </svg></NavLink>
+            <NavLink to="/dialogs" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fillRule="evenodd" clipRule="evenodd" d="M6 3C3.79086 3 2 4.79086 2 7V17C2 19.2091
                 3.79086 21 6 21H18C20.2091 21 22 19.2091 22 17V7C22 4.79086 20.2091 3 18 3H6ZM6.41603 
                 7.37592C6.07138 7.14616 5.60573 7.23929 5.37597 7.58393C5.1462 7.92858 5.23933 8.39423 
                 5.58398 8.624L9.36518 11.1448C10.9607 12.2085 13.0393 12.2085 14.6348 11.1448L18.416 
                 8.624C18.7607 8.39423 18.8538 7.92858 18.624 7.58393C18.3943 7.23929 17.9286 7.14616 
                 17.584 7.37592L13.8028 9.89672C12.7111 10.6245 11.2889 10.6245 10.1972 9.89672L6.41603 
                 7.37592Z" fill="#999ba3" />
-         </svg></NavLink>
-         <NavLink to="/news" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M11.25 4.37808C9.13095 2.92228 6.18953 2.25933 
+            </svg></NavLink>
+            <NavLink to="/news" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fillRule="evenodd" clipRule="evenodd" d="M11.25 4.37808C9.13095 2.92228 6.18953 2.25933 
                3.99433 2.01127C2.89642 1.88721 2 2.80402 2 3.93518V15.2C2 16.3311 2.89642 17.2483 3.99433 
                17.3723C6.18953 17.6204 9.13095 18.2833 11.25 19.7391V4.37808ZM12.75 19.7391C14.869 18.2833 
                17.8105 17.6204 20.0057 17.3723C21.1036 17.2483 22 16.3311 22 15.2V3.93518C22 2.80402 21.1036 
@@ -33,19 +36,19 @@ const Navigation = () => {
                4.32221 10.7306 4.25882 11.14C4.19543 11.5493 4.47587 11.9325 4.8852 11.9959C5.50444 12.0918 6.15812 
                12.2196 6.81651 12.3857C7.21814 12.487 7.62587 12.2436 7.7272 11.8419C7.82853 11.4403 7.58509 11.0326
                 7.18346 10.9313C6.47445 10.7524 5.7745 10.6158 5.11477 10.5136Z" fill="#999ba3" />
-         </svg>
-         </NavLink>
-         <NavLink to="/music" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M12.25 4C12.25 2.55087 13.4891 1.09343 15.1648 
+            </svg>
+            </NavLink>
+            <NavLink to="/music" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fillRule="evenodd" clipRule="evenodd" d="M12.25 4C12.25 2.55087 13.4891 1.09343 15.1648 
                1.52004C18.9498 2.48363 21.75 5.91386 21.75 10C21.75 11.159 21.5243 12.2671 21.1137 13.2814C20.999 
                13.5646 20.724 13.75 20.4185 13.75C20.1129 13.75 19.8379 13.5646 19.7233 13.2814C19.1709 11.9168 
                18.2213 10.5152 17.0274 9.46331C16.0413 8.59456 14.9228 7.99253 13.75 7.80891V17C13.75 20.1756 
                11.1756 22.75 8 22.75C4.82436 22.75 2.25 20.1756 2.25 17C2.25 13.8244 4.82436 11.25 8 11.25C9.68372 
                11.25 11.1984 11.9737 12.25 13.127V4Z" fill="#999ba3" />
-         </svg>
-         </NavLink>
-         <NavLink to="/settings" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M16.3333 3.5C15.0447 3.5 14 4.54467 14 
+            </svg>
+            </NavLink>
+            <NavLink to="/settings" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fillRule="evenodd" clipRule="evenodd" d="M16.3333 3.5C15.0447 3.5 14 4.54467 14 
                5.83333V8.16667C14 9.45533 15.0447 10.5 16.3333 10.5H18.6667C19.9553 10.5 21 9.45533 21 
                8.16667V5.83333C21 4.54467 19.9553 3.5 18.6667 3.5H16.3333ZM5.33333 13.5C4.04467 13.5 3 14.5447 3 
                15.8333V18.1667C3 19.4553 4.04467 20.5 5.33333 20.5H7.66667C8.95533 20.5 10 19.4553 10 18.1667V15.8333C10 
@@ -54,14 +57,16 @@ const Navigation = () => {
                3 8.16667V5.83333ZM16.3333 13.5C15.0447 13.5 14 14.5447 14 15.8333V18.1667C14 19.4553 15.0447 20.5 
                16.3333 20.5H18.6667C19.9553 20.5 21 19.4553 21 18.1667V15.8333C21 14.5447 19.9553 13.5 18.6667 
                13.5H16.3333Z" fill="#999ba3" />
-         </svg>
-         </NavLink>
-         <NavLink to="/users" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C12.2091 11 14 9.20914 14 7C14 4.79086 12.2091 3 10 3C7.79086 3 6 4.79086 6 7C6 9.20914 7.79086 11 10 11ZM10 21C13.866 21 17 19.2091 17 17C17 14.7909 13.866 13 10 13C6.13401 13 3 14.7909 3 17C3 19.2091 6.13401 21 10 21ZM13.9614 10.8155C14.9141 9.82652 15.5 8.48172 15.5 7.00008C15.5 6.29549 15.3675 5.62184 15.1261 5.00269C16.7244 5.0688 17.9999 6.38548 17.9999 8.00008C17.9999 9.65694 16.6568 11.0001 14.9999 11.0001C14.6349 11.0001 14.285 10.9349 13.9614 10.8155ZM18.4999 16.9999C18.4999 17.5387 18.3802 18.0595 18.157 18.5515C19.8634 18.0226 20.9999 17.0776 20.9999 15.9999C20.9999 14.4937 18.7799 13.2468 15.8867 13.0325C17.4974 14.0333 18.4999 15.4409 18.4999 16.9999Z" fill="#999ba3" />
-         </svg>
-         </NavLink>
-      </nav >
-   );
+            </svg>
+            </NavLink>
+            <NavLink to="/users" className={activeLink}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C12.2091 11 14 9.20914 14 7C14 4.79086 12.2091 3 10 3C7.79086 3 6 4.79086 6 7C6 9.20914 7.79086 11 10 11ZM10 21C13.866 21 17 19.2091 17 17C17 14.7909 13.866 13 10 13C6.13401 13 3 14.7909 3 17C3 19.2091 6.13401 21 10 21ZM13.9614 10.8155C14.9141 9.82652 15.5 8.48172 15.5 7.00008C15.5 6.29549 15.3675 5.62184 15.1261 5.00269C16.7244 5.0688 17.9999 6.38548 17.9999 8.00008C17.9999 9.65694 16.6568 11.0001 14.9999 11.0001C14.6349 11.0001 14.285 10.9349 13.9614 10.8155ZM18.4999 16.9999C18.4999 17.5387 18.3802 18.0595 18.157 18.5515C19.8634 18.0226 20.9999 17.0776 20.9999 15.9999C20.9999 14.4937 18.7799 13.2468 15.8867 13.0325C17.4974 14.0333 18.4999 15.4409 18.4999 16.9999Z" fill="#999ba3" />
+            </svg>
+            </NavLink>
+         </nav >
+      );
+   };
+
 };
 
 export default Navigation;

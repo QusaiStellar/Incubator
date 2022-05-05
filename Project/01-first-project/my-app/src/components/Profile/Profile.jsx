@@ -5,13 +5,16 @@ import User from './User/User';
 import PostFormContainer from './Post_form/PostFormContainer';
 
 
-const Profile = () => {
-   return (
-      <main className={styles.profile}>
-         <User />
-         <PostFormContainer />
-      </main>
-   );
+class Profile extends React.Component {
+   
+   render = () => {
+      return (
+         <main className={styles.profile} >
+            <User />
+            <PostFormContainer />
+         </main>
+      );
+   };
 };
 
 export default Profile;

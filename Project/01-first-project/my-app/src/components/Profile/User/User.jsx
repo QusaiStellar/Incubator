@@ -1,17 +1,19 @@
+import React from 'react';
+
 import Allinfo from './Allinfo/Allinfo';
 import Avatar from './Avatar/Avatar';
 import styles from './User.module.css';
 
 
-const User = () => {
-   return (
-
-      <div className={styles.user}>
-         <Avatar />
-         <Allinfo />
-      </div>
-
-   );
+class User extends React.Component {
+   render = () => {
+      return (
+         <div className={styles.user} >
+            <Avatar />
+            <Allinfo />
+         </div>
+      );
+   };
 };
 
 export default User;

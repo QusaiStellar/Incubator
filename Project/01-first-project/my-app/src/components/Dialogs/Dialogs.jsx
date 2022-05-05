@@ -1,25 +1,30 @@
+import React from 'react';
+
 import Messages from './Messages/Messages';
 import Friends from './Friends/Friends';
 import styles from './Dialogs.module.css';
 
 
 
-const Dialogs = (props) => {
+class Dialogs extends React.Component {
 
-   const friends = props.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
 
-   return (
-      <main>
-         <div className={styles.dialogs_wrapper}>
-            <div className={styles.friends_wrapper}>
-               {friends}
+   friends = this.props.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
+
+   render = () => {
+      return (
+         <main>
+            <div className={styles.dialogs_wrapper}>
+               <div className={styles.friends_wrapper}>
+                  {this.friends}
+               </div>
+               <div className={styles.messages_wrapper}>
+                  <Messages />
+               </div>
             </div>
-            <div className={styles.messages_wrapper}>
-               <Messages />
-            </div>
-         </div>
-      </main>
-   );
+         </main>
+      );
+   };
 };
 
 export default Dialogs;

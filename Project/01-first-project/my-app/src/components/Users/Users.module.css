@@ -1,4 +1,7 @@
-.wrapper {
+.users {
+   width: 100%;
+}
+.usersWrapper {
    margin-top: 10px;
    padding: 20px;
    border-radius: 10px;
@@ -6,6 +9,22 @@
    flex: 1 1 49%;
    max-width: 49%;
    background-color: #edf2f6;
+}
+
+.wrapper {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   align-items: center;
+   justify-content: flex-start;
+}
+.getUsers {
+   display: block;
+   max-width: 200px;
+   padding: 10px;
+   margin: 10px auto;
+
 }
 .avatar {
    display: flex;
@@ -63,5 +82,5 @@ font-size: 14px;
 }
 
 .city {
-
+   font-size: 12px;
 }

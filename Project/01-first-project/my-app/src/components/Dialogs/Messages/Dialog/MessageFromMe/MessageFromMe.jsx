@@ -1,12 +1,16 @@
+import React from 'react';
+
 import styles from './MessageFromMe.module.css';
 
 
-const MessageFromMe = (props) => {
-   return (
-      <div className={styles.message}>
-         <span>{props.message}</span>
-      </div>
-   );
+class MessageFromMe extends React.Component {
+   render = () => {
+      return (
+         <div className={styles.message}>
+            <span>{this.props.message}</span>
+         </div>
+      );
+   };
 };
 
 export default MessageFromMe;
