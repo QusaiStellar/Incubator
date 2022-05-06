@@ -6,16 +6,29 @@ import userImg from '../../img/avatar.jpg';
 import styles from './Users.module.css';
 
 class Users extends React.Component {
-   
+
 
    componentDidMount() {
       axios.get('https://social-network.samuraijs.com/api/1.0/users')
          .then(response => this.props.setUsers(response.data.items));
+      axios.get('https://social-network.samuraijs.com/api/1.0/users')
+         .then(response => this.props.totalUsers(response.data.totalCount));
    }
 
+
+
    render = () => {
+
+      const pagesCount = Math.ceil(this.props.totalUsersCount / this.props.usersPerPage);
+      for (let i = 1; i <= pagesCount; i++) {
+         this.props.pages(i);
+      }
+
       return (
          <div className={styles.wrapper}>
+            <ul>
+
+            </ul>
             {this.props.users.map(users =>
                <section className={styles.usersWrapper}>
                   <div className={styles.avatar}>
