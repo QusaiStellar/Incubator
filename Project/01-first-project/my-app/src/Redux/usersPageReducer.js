@@ -2,13 +2,13 @@ const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SETUSERS = 'SETUSERS';
 const TOTAL_USERS = 'TOTAL_USERS';
-const PAGES = 'PAGES';
+const SELECT_PAGE = 'SELECT_PAGE';
 
 const initialState = {
    users: [],
    usersPerPage: 10,
    totalUsersCount: 0,
-   pagesCount: [],
+   selectedPage: 1,
 };
 const usersPageReducer = (state = initialState, action) => {
 
@@ -43,10 +43,10 @@ const usersPageReducer = (state = initialState, action) => {
             ...state,
             totalUsersCount: action.totalUsersCount,
          };
-      case PAGES:
+      case SELECT_PAGE:
          return {
             ...state,
-            pagesCount: [...state.pagesCount, action.pagesCount],
+            selectedPage: action.page,
          };
       default:
          return state;
@@ -65,7 +65,7 @@ export const setUsersAC = (users) => {
 export const totalUsersAC = (totalUsersCount) => {
    return { type: TOTAL_USERS, totalUsersCount };
 };
-export const pagesAC = (pagesCount) => {
-   return { type: PAGES, pagesCount };
+export const selectPageAC = (page) => {
+   return { type: SELECT_PAGE, page };
 };
 export default usersPageReducer;

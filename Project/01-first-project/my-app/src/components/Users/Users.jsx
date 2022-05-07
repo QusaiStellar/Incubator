@@ -9,25 +9,31 @@ class Users extends React.Component {
 
 
    componentDidMount() {
-      axios.get('https://social-network.samuraijs.com/api/1.0/users')
-         .then(response => this.props.setUsers(response.data.items));
-      axios.get('https://social-network.samuraijs.com/api/1.0/users')
+      axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.selectedPage}&count=${this.props.usersPerPage}`)
+         .then(response => this.props.setUsers(response.data.items))
          .then(response => this.props.totalUsers(response.data.totalCount));
    }
 
 
 
-   render = () => {
 
+   render = () => {
+      const pages = [];
       const pagesCount = Math.ceil(this.props.totalUsersCount / this.props.usersPerPage);
-      for (let i = 1; i <= pagesCount; i++) {
-         this.props.pages(i);
+      for (let i = 1; i < pagesCount; i++) {
+         pages.push(i);
       }
+      const curP = this.props.selectedPage;
+      const curPF = ((curP - 5) < 0) ? 0 : curP - 5;
+      const curPL = ((curP - 5) < 0) ? 10 : curP + 5;
+      const slicedPages = pages.slice(curPF, curPL);
 
       return (
          <div className={styles.wrapper}>
-            <ul>
-
+            <ul className={styles.pages}>
+               {slicedPages.map(p => {
+                  return <li onClick={() => { this.props.selectPage(p); }} className={this.props.selectedPage === p && styles.selectedPage}>{p}</li>;
+               })}
             </ul>
             {this.props.users.map(users =>
                <section className={styles.usersWrapper}>
