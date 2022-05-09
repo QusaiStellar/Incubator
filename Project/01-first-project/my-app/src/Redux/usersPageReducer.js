@@ -3,12 +3,14 @@ const UNFOLLOW = 'UNFOLLOW';
 const SETUSERS = 'SETUSERS';
 const TOTAL_USERS = 'TOTAL_USERS';
 const SELECT_PAGE = 'SELECT_PAGE';
+const PRELOADER = 'PRELOADER';
 
 const initialState = {
    users: [],
    usersPerPage: 10,
    totalUsersCount: 0,
    selectedPage: 1,
+   isFatching: true,
 };
 const usersPageReducer = (state = initialState, action) => {
 
@@ -48,24 +50,32 @@ const usersPageReducer = (state = initialState, action) => {
             ...state,
             selectedPage: action.page,
          };
+      case PRELOADER:
+         return {
+            ...state,
+            isFatching: action.isFatching,
+         };
       default:
          return state;
    }
 };
 
-export const followAC = (userId) => {
+export const follow = (userId) => {
    return { type: FOLLOW, userId };
 };
-export const unfollowAC = (userId) => {
+export const unfollow = (userId) => {
    return { type: UNFOLLOW, userId };
 };
-export const setUsersAC = (users) => {
+export const setUsers = (users) => {
    return { type: SETUSERS, users };
 };
-export const totalUsersAC = (totalUsersCount) => {
+export const totalUsers = (totalUsersCount) => {
    return { type: TOTAL_USERS, totalUsersCount };
 };
-export const selectPageAC = (page) => {
+export const selectPage = (page) => {
    return { type: SELECT_PAGE, page };
+};
+export const preloader = (isFatching) => {
+   return { type: PRELOADER, isFatching };
 };
 export default usersPageReducer;
