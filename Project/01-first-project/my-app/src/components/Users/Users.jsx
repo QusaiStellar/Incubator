@@ -10,12 +10,19 @@ class Users extends React.Component {
 
    componentDidMount() {
       axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.selectedPage}&count=${this.props.usersPerPage}`)
-         .then(response => this.props.setUsers(response.data.items))
-         .then(response => this.props.totalUsers(response.data.totalCount));
+         .then(response => {
+            this.props.setUsers(response.data.items);
+            this.props.totalUsers(response.data.totalCount);
+         });
    }
 
 
+   pageChanged = (p) => {
+      this.props.selectPage(p);
 
+      axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.selectedPage}&count=${this.props.usersPerPage}`)
+         .then(response => this.props.setUsers(response.data.items));
+   };
 
    render = () => {
       const pages = [];
@@ -32,7 +39,7 @@ class Users extends React.Component {
          <div className={styles.wrapper}>
             <ul className={styles.pages}>
                {slicedPages.map(p => {
-                  return <li onClick={() => { this.props.selectPage(p); }} className={this.props.selectedPage === p && styles.selectedPage}>{p}</li>;
+                  return <li onClick={() => { this.pageChanged(p); }} className={this.props.selectedPage === p && styles.selectedPage}>{p}</li>;
                })}
             </ul>
             {this.props.users.map(users =>
