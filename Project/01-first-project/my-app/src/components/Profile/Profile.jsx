@@ -2,15 +2,14 @@ import React from 'react';
 
 import styles from './Profile.module.css';
 import User from './User/User';
-import PostFormContainer from './Post_form/PostFormContainer';
+import PostForm from './Post_form/PostForm';
 
 
 const Profile = (props) => {
-
    return (
       <main className={styles.profile} >
          <User userProfile={props.userProfile} />
-         <PostFormContainer />
+         <PostForm {...props} userProfile={props.userProfile} />
       </main>
    );
 };

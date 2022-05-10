@@ -19,7 +19,7 @@ const App = () => {
                <Routes>
                   <Route exact path="/dialogs/*"
                      element={<DialogsContainer />} />
-                  <Route path="/profile/*"
+                  <Route path="/profile/:userId"
                      element={<ProfileContainer />} />
                   <Route path="/users"
                      element={<section><div className="users-wrapper"><UsersContainer /></div></section>} />

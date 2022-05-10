@@ -20,6 +20,25 @@
    margin-left: 20px;
 }
 
+.infoWrapper {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.about {
+   flex: 1 1 auto;
+}
+
+.social {
+   flex: 0 0 10%;
+   display: flex;
+   gap: 15px ;
+}
+.social svg {
+   width: 30px;
+}
+
 .name {
    font-size: 24px;
    margin-bottom: 10px;
@@ -97,6 +116,7 @@
 
 .allinfo {
    padding: 0 0 0 20px;
+   flex: 1 1 auto;
 }
 
 .name {
@@ -117,4 +137,5 @@
    width: 100%;
    border-radius: 10px;
 }
+
 
