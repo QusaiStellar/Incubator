@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import userImg from '../../assets/img/avatar.jpg';
 
-import styles from './Users.module.css';
+import styles from './Users.module.scss';
 
 function Users(props) {
 

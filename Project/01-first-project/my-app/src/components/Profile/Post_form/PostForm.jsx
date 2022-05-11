@@ -2,7 +2,7 @@ import React from 'react';
 
 import Post from './Post/Post';
 
-import styles from './PostForm.module.css';
+import styles from './PostForm.module.scss';
 
 const PostForm = (props) => {
    const newPost = React.createRef();

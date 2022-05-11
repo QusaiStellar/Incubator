@@ -1,8 +1,8 @@
-import './App.css';
+import './App.scss';
 import { Route, Routes } from 'react-router-dom';
 
 import DialogsContainer from './components/Dialogs/DialogsContainer';
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/HeaderContainer';
 import Navigation from './components/Navigation/Navigation';
 import NotFound from './components/NotFound/NotFound';
 import FastDialogsContainer from './components/FastDialogs/FastDialogsContainer';
@@ -12,7 +12,7 @@ import ProfileContainer from './components/Profile/ProfileContainer';
 const App = () => {
    return (
       <div className="app-wrapper">
-         <Header />
+         <HeaderContainer />
          <div className="app-wrapper-content">
             <Navigation />
             <div className="changing-content">

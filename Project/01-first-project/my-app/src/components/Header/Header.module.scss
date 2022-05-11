@@ -1,0 +1,37 @@
+.header {
+   background-color: #3f4552;
+   padding: 10px;
+}
+
+
+.header_raw {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: center;
+   
+}
+
+
+
+.icons {
+color: aliceblue;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.login {
+   font-size: 14px;
+}
+
+.search {
+   resize: none;
+   border: 1px solid black;
+   width: 500px;
+   height: 30px;
+   padding: 10px 20px;
+   border-radius: 10px;
+   background-color: #edf2f6;
+   color: #999ba3;
+}

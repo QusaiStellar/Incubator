@@ -1,6 +1,6 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
-const SETUSERS = 'SETUSERS';
+const SET_USERS = 'SET_USERS';
 const TOTAL_USERS = 'TOTAL_USERS';
 const SELECT_PAGE = 'SELECT_PAGE';
 const PRELOADER = 'PRELOADER';
@@ -35,7 +35,7 @@ const usersPageReducer = (state = initialState, action) => {
                return u;
             }),
          };
-      case SETUSERS:
+      case SET_USERS:
          return {
             ...state,
             users: action.users,
@@ -67,7 +67,7 @@ export const unfollow = (userId) => {
    return { type: UNFOLLOW, userId };
 };
 export const setUsers = (users) => {
-   return { type: SETUSERS, users };
+   return { type: SET_USERS, users };
 };
 export const totalUsers = (totalUsersCount) => {
    return { type: TOTAL_USERS, totalUsersCount };

@@ -8,12 +8,11 @@
    height: 100px;
    width: 100%;
    margin-bottom: 20px;
+   & img {
+      height: 100%;
+      width: 100%;
+   }
 }
-.contentBackground img {
-   height: 100%;
-   width: 100%;
-}
-
 .user {
    display: flex;
    margin-bottom: 30px;
@@ -34,11 +33,10 @@
    flex: 0 0 10%;
    display: flex;
    gap: 15px ;
+   & svg {
+      width: 30px;
+   }
 }
-.social svg {
-   width: 30px;
-}
-
 .name {
    font-size: 24px;
    margin-bottom: 10px;
@@ -51,11 +49,10 @@
 
 .avatar {
    width: 250px;
-}
-
-.avatar img {
-   width: 100%;
-   border-radius: 10px;
+   & img {
+      width: 100%;
+      border-radius: 50%;
+   }
 }
 
 .post_form {
@@ -81,38 +78,6 @@
    text-transform: uppercase;
    letter-spacing: 1px;
 }
-.posts {
-   margin: 0 20px;
-}
-.post {
-   display: flex;
-   margin-bottom: 20px;
-}
-
-.post_avatar {
-   flex: 0 0 70px;
-   text-align: center;
-}
-.post_avatar img {
-   width: 50px;
-   border-radius: 50%;
-}
-
-.post_item {
-   flex: 1 1 auto;
-}
-
-.post_nickname {
-   font-size: 16px;
-   font-weight: 500;
-   text-transform: uppercase;
-   margin-bottom: 10px;
-}
-
-.post_text {
-   font-size: 14px;
-   line-height: 1.5;
-}
 
 .allinfo {
    padding: 0 0 0 20px;
@@ -128,14 +93,4 @@
    font-size: 18px;
    line-height: 1.5;
 }
-
-.avatar {
-   width: 250px;
-}
-
-.avatar img {
-   width: 100%;
-   border-radius: 10px;
-}
-
 

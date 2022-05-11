@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import avatar from '../../../assets/img/avatar.jpg';
 
-import styles from './Friend.module.css';
+import styles from './Friend.module.scss';
 const activeLink = ({ isActive }) => isActive ? styles.active : '';
 
 

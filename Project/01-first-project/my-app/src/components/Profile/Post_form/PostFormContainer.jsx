@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import * as axios from 'axios';
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import React from 'react';
 
 import { addPost, updateNewPostText, setUserProfile } from '../../../Redux/profilePageReducer';

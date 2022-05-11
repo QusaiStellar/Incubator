@@ -2,7 +2,7 @@ import React from 'react';
 
 import avatar from './../../../../assets/img/avatar.jpg';
 
-import styles from './Post.module.css';
+import styles from './Post.module.scss';
 
 
 const Post = (props) => {

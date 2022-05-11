@@ -4,24 +4,22 @@
    padding: 20px;
    border-radius: 10px;
    display: flex;
-   flex: 1 1 49%;
-   max-width: 49%;
+   flex: 1 1 45%;
    background-color: #edf2f6;
 }
 .pages {
    display: block;
    width: 100%;
    margin-top: 20px;
-}
 
-.pages li{
-   display: inline-block;
-   cursor: pointer;
-   padding-right: 10px;
-   font-size: 18px;
-   color: #626365;
+   & li{
+      display: inline-block;
+      cursor: pointer;
+      padding-right: 10px;
+      font-size: 18px;
+      color: #626365;
+   }
 }
-
 .selectedPage {
    font-weight: 600;
    font-size: 30px;
@@ -88,7 +86,6 @@ font-size: 14px;
 .location {
    display: flex;
    flex: 0 0 80px;
-
    flex-direction: column;
 }
 
