@@ -3,19 +3,6 @@ const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE_NEW_MESSAGE_TEXT';
 
 const initialState = {
    friends: [],
-   messagesFromMe: [
-      { id: 1, messageText: 'messagesFromMe' },
-      { id: 2, messageText: 'messagesFromMe' },
-      { id: 3, messageText: 'messagesFromMe' },
-      { id: 4, messageText: 'messagesFromMe' },
-   ],
-   messagesFromFriend: [
-      { id: 1, messageText: 'messagesFromFriend' },
-      { id: 2, messageText: 'messagesFromFriend' },
-      { id: 3, messageText: 'messagesFromFriend' },
-      { id: 4, messageText: 'messagesFromFriend' },
-   ],
-   newMessageText: '',
 };
 
 const dialogsPageReducer = (state = initialState, action) => {

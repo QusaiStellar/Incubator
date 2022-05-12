@@ -6,7 +6,7 @@ import FastDialogs from './FastDialogs';
 
 const mapStateToProps = (state) => {
    return {
-      state: state.dialogsPage.friendsData,
+      friends: state.dialogsPage.friends,
    };
 };
 

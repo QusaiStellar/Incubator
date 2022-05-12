@@ -6,17 +6,17 @@ import styles from './Dialogs.module.css';
 
 const Dialogs = (props) => {
 
-   const friends = props.friendsData.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
+   const friends = props.friends.map(friend => <Friends id={friend.id} nickname={friend.nickname} />);
 
    return (
       <main>
          <div className={styles.dialogs_wrapper}>
             <div className={styles.friends_wrapper}>
-               {friends}
+               {props.friends.length !== 0 ? { friends } : 'У вас нет друзей'}
             </div>
-            {props.router.params !== '' ? <div className={styles.messages_wrapper}>
+            {props.router.params !== Number ? <div className={styles.messages_wrapper}>
                <Messages />
-            </div> : ''}
+            </div> : 'Выберите друга'}
          </div>
       </main>
    );
