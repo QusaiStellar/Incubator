@@ -7,6 +7,7 @@ const PRELOADER = 'PRELOADER';
 
 const initialState = {
    users: [],
+   friends: [],
    usersPerPage: 10,
    totalUsersCount: 0,
    selectedPage: 1,
@@ -21,6 +22,7 @@ const usersPageReducer = (state = initialState, action) => {
             users: state.users.map(u => {
                if (u.id === action.userId) {
                   u.followed = true;
+                  state.friends.push(u);
                }
                return u;
             }),
@@ -31,6 +33,7 @@ const usersPageReducer = (state = initialState, action) => {
             users: state.users.map(u => {
                if (u.id === action.userId) {
                   u.followed = false;
+                  state.friends.splice(state.friends.findIndex(el => el.id === u.id), 1);
                }
                return u;
             }),
@@ -78,4 +81,5 @@ export const selectPage = (page) => {
 export const preloader = (isFatching) => {
    return { type: PRELOADER, isFatching };
 };
+
 export default usersPageReducer;

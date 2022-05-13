@@ -6,15 +6,13 @@ import avatar from './../../../assets/img/avatar.jpg';
 import styles from './Friends.module.css';
 
 
-class Friends extends React.Component {
-   render = () => {
-      return (
-         <NavLink to={'/dialogs/' + this.props.id} className={styles.friends_wrapper}>
-            <div className={styles.avatar}><img src={avatar} alt="avatar" /></div>
-            <div className={styles.nickname}>{this.props.nickname}</div>
-         </NavLink>
-      );
-   };
+const Friends = (props) => {
+   return (
+      <NavLink to={'/dialogs/' + props.id} className={styles.friends_wrapper}>
+         <div className={styles.avatar}><img src={avatar} alt="avatar" /></div>
+         <div className={styles.nickname}>{props.nickname}</div>
+      </NavLink>
+   );
 };
 
 export default Friends;

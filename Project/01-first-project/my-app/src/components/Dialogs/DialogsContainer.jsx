@@ -25,7 +25,7 @@ const withRouter = (DialogsContainer) => {
 
 const mapStateToProps = (state) => {
    return {
-      friends: state.dialogsPage.friends,
+      friends: state.usersPage.friends,
    };
 };
 
