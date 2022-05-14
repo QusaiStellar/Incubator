@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import userImg from '../../assets/img/avatar.jpg';
 
 import styles from './Users.module.scss';
-import { follow, unfollow } from '../../api/api';
 
 function Users(props) {
 
@@ -29,19 +28,11 @@ function Users(props) {
             <section className={styles.usersWrapper}>
                <div className={styles.avatar}>
                   <NavLink to={`/profile/${users.id}`}> <img src={users.photos.small != null ? users.photos.small : userImg} className={styles.userAvatar} alt="avatar" /></NavLink>
-                  <button onClick={users.followed ?
+                  <button disabled={props.isRequest.some(el => el === users.id)} onClick={users.followed ?
                      () => {
-                        unfollow(users.id).then(data => {
-                           if (data.resultCode === 0) {
-                              props.unfollow(users.id);
-                           }
-                        });
+                        props.unfollow(users.id);
                      } : () => {
-                        follow(users.id).then(data => {
-                           if (data.resultCode === 0) {
-                              props.follow(users.id);
-                           }
-                        });
+                        props.follow(users.id);
                      }} className={styles.btn}>
                      {users.followed ? 'Unfollow' : 'Follow'}
                   </button>
