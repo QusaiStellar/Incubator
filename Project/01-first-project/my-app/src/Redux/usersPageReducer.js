@@ -22,7 +22,6 @@ const usersPageReducer = (state = initialState, action) => {
             users: state.users.map(u => {
                if (u.id === action.userId) {
                   u.followed = true;
-                  state.friends.push(u);
                }
                return u;
             }),
@@ -33,7 +32,6 @@ const usersPageReducer = (state = initialState, action) => {
             users: state.users.map(u => {
                if (u.id === action.userId) {
                   u.followed = false;
-                  state.friends.splice(state.friends.findIndex(el => el.id === u.id), 1);
                }
                return u;
             }),

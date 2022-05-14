@@ -12,7 +12,9 @@ class UsersContainerAPI extends React.Component {
 
    componentDidMount() {
       this.props.preloader(true);
-      axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.selectedPage}&count=${this.props.usersPerPage}`)
+      axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.selectedPage}&count=${this.props.usersPerPage}`, {
+         withCredentials: true,
+      })
          .then(response => {
             this.props.preloader(false);
             this.props.setUsers(response.data.items);
@@ -23,7 +25,9 @@ class UsersContainerAPI extends React.Component {
    pageChanged = (p) => {
       this.props.preloader(true);
       this.props.selectPage(p);
-      axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.selectedPage}&count=${this.props.usersPerPage}`)
+      axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.selectedPage}&count=${this.props.usersPerPage}`, {
+         withCredentials: true,
+      })
          .then(response => {
             this.props.preloader(false);
             this.props.setUsers(response.data.items);
