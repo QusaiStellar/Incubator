@@ -1,10 +1,10 @@
 import React from 'react';
-import * as axios from 'axios';
 import { NavLink } from 'react-router-dom';
 
 import userImg from '../../assets/img/avatar.jpg';
 
 import styles from './Users.module.scss';
+import { follow, unfollow } from '../../api/api';
 
 function Users(props) {
 
@@ -29,31 +29,22 @@ function Users(props) {
             <section className={styles.usersWrapper}>
                <div className={styles.avatar}>
                   <NavLink to={`/profile/${users.id}`}> <img src={users.photos.small != null ? users.photos.small : userImg} className={styles.userAvatar} alt="avatar" /></NavLink>
-                  <button onClick={users.followed ? () => {
-                     axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${users.id}`, {
-                        withCredentials: true,
-                        headers: {
-                           'API-KEY': '5cb265e5-94b2-4e25-b7c1-89c20d7588fc',
-                        },
-                     })
-                        .then(response => {
-                           if (response.data.resultCode === 0) {
+                  <button onClick={users.followed ?
+                     () => {
+                        unfollow(users.id).then(data => {
+                           if (data.resultCode === 0) {
                               props.unfollow(users.id);
                            }
                         });
-                  } : () => {
-                     axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${users.id}`, {}, {
-                        withCredentials: true,
-                        headers: {
-                           'API-KEY': '5cb265e5-94b2-4e25-b7c1-89c20d7588fc',
-                        },
-                     })
-                        .then(response => {
-                           if (response.data.resultCode === 0) {
+                     } : () => {
+                        follow(users.id).then(data => {
+                           if (data.resultCode === 0) {
                               props.follow(users.id);
                            }
                         });
-                  }} className={styles.btn}>{users.followed ? 'Unfollow' : 'Follow'}</button>
+                     }} className={styles.btn}>
+                     {users.followed ? 'Unfollow' : 'Follow'}
+                  </button>
                </div>
                <div className={styles.allInfo}>
                   <div className={styles.userInfo}>
