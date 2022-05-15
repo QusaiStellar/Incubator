@@ -29,7 +29,6 @@ class UsersContainerAPI extends React.Component {
             unfollow={this.props.unfollow}
             follow={this.props.follow}
             isRequest={this.props.isRequest}
-            toggleRequest={this.props.toggleRequest}
          />
       );
    };
@@ -45,8 +44,6 @@ const mapStateToProps = (state) => {
       isRequest: state.usersPage.isRequest,
    };
 };
-
-
 
 const UsersContainer = connect(
    mapStateToProps,
