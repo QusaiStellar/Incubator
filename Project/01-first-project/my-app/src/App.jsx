@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
-import Navigation from './components/Navigation/Navigation';
+import NavigationContainer from './components/Navigation/Navigation';
 import NotFound from './components/NotFound/NotFound';
 import FastDialogsContainer from './components/FastDialogs/FastDialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
@@ -15,12 +15,12 @@ const App = () => {
       <div className="app-wrapper">
          <HeaderContainer />
          <div className="app-wrapper-content">
-            <Navigation />
+            <NavigationContainer />
             <div className="changing-content">
                <Routes>
                   <Route exact path="/dialogs/*"
                      element={<DialogsContainer />} />
-                  <Route path="/profile/:userId"
+                  <Route path="/profile/:userId?"
                      element={<ProfileContainer />} />
                   <Route path="/login"
                      element={<Login />} />

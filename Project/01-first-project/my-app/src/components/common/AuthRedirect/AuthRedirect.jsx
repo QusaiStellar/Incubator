@@ -7,7 +7,7 @@ export const AuthRedirect = (Component) => {
    class RedirectAuth extends React.Component {
       render() {
          if (this.props.isAuth) return <Component {...this.props} />;
-         return <Navigate replace to="/login" />;
+         return <Navigate replace to="/login/" />;
       }
    };
 
