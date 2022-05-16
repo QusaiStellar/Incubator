@@ -8,6 +8,7 @@ import NotFound from './components/NotFound/NotFound';
 import FastDialogsContainer from './components/FastDialogs/FastDialogsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
+import Login from './components/Login/Login';
 
 const App = () => {
    return (
@@ -21,6 +22,8 @@ const App = () => {
                      element={<DialogsContainer />} />
                   <Route path="/profile/:userId"
                      element={<ProfileContainer />} />
+                  <Route path="/login"
+                     element={<Login />} />
                   <Route path="/users"
                      element={<section><div className="users-wrapper"><UsersContainer /></div></section>} />
                   <Route path="/*"

@@ -35,7 +35,7 @@ export const setUserAuth = (userId, login, email) => {
    };
 };
 
-export const userAuth = (userId) => {
+export const userAuth = () => {
    return (dispatch) => {
       auth().then(data => {
          if (data.resultCode === 0) {
