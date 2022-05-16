@@ -11,12 +11,14 @@ export const AuthRedirect = (Component) => {
       }
    };
 
+   const mapStateToProps = (state) => {
+      return {
+         isAuth: state.userAuth.isAuth,
+      };
+   };
    const ConectedAuthRedirect = connect(mapStateToProps)(RedirectAuth);
+
    return ConectedAuthRedirect;
 };
 
-const mapStateToProps = (state) => {
-   return {
-      isAuth: state.userAuth.isAuth,
-   };
-};
+

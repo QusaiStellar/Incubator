@@ -31,7 +31,7 @@ class ProfileContainer extends React.Component {
 
 
    render = () => {
-      return <ProfileContainer {...this.props} />;
+      return <Profile {...this.props} />;
    };
 }
 const ProfileAuthRedirect = AuthRedirect(withRouter(ProfileContainer));
