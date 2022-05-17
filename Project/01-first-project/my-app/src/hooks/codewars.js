@@ -1,6 +1,23 @@
-const calculate = (...args1) => (...args2) => {
-   let sum = [...args1, ...args2].reduce((s, v) => s + v);
-   console.log(sum);
+
+const order = (words) => {
+   if (words === '') {
+      return '';
+   }
+   let array = words.split(' ');
+   let result = [];
+   result.array.forEach(element => {
+
+   });
+   return;
+};
+
+const words = 'is2 Thi1s T4est 3a';
+
+function pow(a) {
+   if (a.length === 0) return count;
+   let b = a.length - 1;
+   count++;
+   return pow(b);
 }
 
-calculate(1, 2, 3)(2, 5);
+console.log(pow(1293));
