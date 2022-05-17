@@ -19,18 +19,13 @@ const App = () => {
             <NavigationContainer />
             <div className="changing-content">
                <Routes>
-                  <Route exact path="/dialogs/*"
-                     element={<DialogsContainer />} />
-                  <Route path="/profile/:userId"
-                     element={<ProfileContainer />} />
-                  <Route path="/login"
-                     element={<Login />} />
-                  <Route path="/news"
-                     element={<NewsContainer />} />
+                  <Route exact path="/dialogs/*" element={<DialogsContainer />} />
+                  <Route path="/profile/:userId" element={<ProfileContainer />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/news" element={<NewsContainer />} />
                   <Route path="/users"
                      element={<section><div className="users-wrapper"><UsersContainer /></div></section>} />
-                  <Route path="/*"
-                     element={<NotFound />} />
+                  <Route path="/*" element={<NotFound />} />
                </Routes>
             </div>
             <FastDialogsContainer />

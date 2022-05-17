@@ -10,6 +10,7 @@ class NewsContainer extends React.Component {
 
 
    render = () => {
+
       return (
          <News />
       );
