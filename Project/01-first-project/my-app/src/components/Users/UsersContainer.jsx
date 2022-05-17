@@ -14,9 +14,7 @@ class UsersContainerAPI extends React.Component {
    }
 
    pageChanged = (p) => {
-
       this.props.changeUsersPage(p, this.props.selectedPage, this.props.usersPerPage);
-
    };
 
    render = () => {

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Navigation from './Navigation';
 
 class NavigationContainer extends React.Component {
-
    render = () => {
       return (
          <Navigation {...this.props} />
@@ -18,4 +17,4 @@ const mapStatetoProps = (state) => {
    };
 };
 
-export default connect(mapStatetoProps)(NavigationContainer);
+export default  connect(mapStatetoProps,)(NavigationContainer);

@@ -1,0 +1,44 @@
+.navigation {
+   flex: 0 0 2%;
+   font-size: 18px;
+   padding: 20px;
+   margin-bottom: 20px;
+   background-color: #fff;
+   border-radius: 15px;
+   color: #999ba3;
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+}
+
+
+
+.navigation a:hover path,
+.navigation a:hover span {
+   fill: black;
+   transition: 0.3s ease;
+}
+
+
+.active path,
+.active span {
+   fill: black;
+}
+
+.navigation a {
+   padding: 10px 0;
+   letter-spacing: 1px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   text-transform: uppercase;
+   transition: 0.3s ease;
+   color: inherit;
+}
+
+.navigation a span {
+   flex: 1 1 auto;
+}
+.navigation a svg {
+   flex: 0 0 auto;
+}

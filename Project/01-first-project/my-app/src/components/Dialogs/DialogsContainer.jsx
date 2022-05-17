@@ -5,7 +5,6 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Dialogs from './Dialogs';
 
 class DialogsContainer extends React.Component {
-
    render = () => {
       return <Dialogs  {...this.props} />;
    };
