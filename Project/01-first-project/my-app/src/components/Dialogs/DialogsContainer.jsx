@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { compose } from 'redux';
+
+import withRouter from '../common/hoc/withRouter';
 
 import Dialogs from './Dialogs';
 
@@ -10,24 +12,13 @@ class DialogsContainer extends React.Component {
    };
 }
 
-
-const withRouter = (DialogsContainer) => {
-   const ComponentWithRouterProp = (props) => {
-      const location = useLocation();
-      const navigate = useNavigate();
-      const params = useParams();
-
-      return <DialogsContainer {...props} router={{ location, navigate, params }} />;
-   };
-   return ComponentWithRouterProp;
-};
-
 const mapStateToProps = (state) => {
    return {
       friends: state.usersPage.friends,
    };
 };
 
-export default connect(
-   mapStateToProps,
-)(withRouter(DialogsContainer));
+export default compose(
+   connect(mapStateToProps,),
+   withRouter
+)(DialogsContainer);

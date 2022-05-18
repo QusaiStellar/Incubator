@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
-export const AuthRedirect = (Component) => {
+export const withAuthRedirect = (Component) => {
    class RedirectAuth extends React.Component {
       render() {
          if (this.props.isAuth) return <Component {...this.props} />;
