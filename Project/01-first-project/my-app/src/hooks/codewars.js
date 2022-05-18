@@ -1,23 +1,24 @@
-
-const order = (words) => {
-   if (words === '') {
-      return '';
-   }
-   let array = words.split(' ');
-   let result = [];
-   result.array.forEach(element => {
-
+/*
+describe("Narcissistic Function", function () {
+   it("should find small numbers are all narcissistic", function () {
+      Test.assertEquals(narcissistic(7), true, "7 is narcissistic");
    });
-   return;
-};
 
-const words = 'is2 Thi1s T4est 3a';
+   it("should find these numbers are narcissistic", function () {
+      Test.assertEquals(narcissistic(371), true, "371 is narcissistic");
+   });
+});
+*/
 
-function pow(a) {
-   if (a.length === 0) return count;
-   let b = a.length - 1;
-   count++;
-   return pow(b);
+function narcissistic(value) {
+
+   const arr = value.toString().split('');
+   const result = [];
+   for (let i = 0; i < arr.length; i++) {
+      result.push(Math.pow(arr[i], arr.length));
+   }
+
+   return result.reduce((prev, curr) => prev + curr).toString() == value;
 }
-
-console.log(pow(1293));
+// eslint-disable-next-line no-console
+console.log(narcissistic(371));
