@@ -1,16 +1,21 @@
 import React from 'react';
 
+import Preloader from '../../../common/Preloader/Preloader';
+
 import avatar from './../../../../assets/img/avatar.jpg';
 
 import styles from './Post.module.scss';
 
 
 const Post = (props) => {
+   if (!props.userProfile) {
+      return <Preloader />;
+   }
    return (
       <div className={styles.post}>
          <div className={styles.post_avatar}><img src={avatar} alt="avatar_post" /></div>
          <div className={styles.post_item}>
-            <div className={styles.post_nickname}>q</div>
+            <div className={styles.post_nickname}>{props.userProfile.fullName}</div>
             <div className={styles.post_text}>{props.text}</div>
             <div className={styles.like_dislike}>
                <div className={styles.like}>

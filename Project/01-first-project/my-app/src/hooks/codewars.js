@@ -10,15 +10,15 @@ describe("Narcissistic Function", function () {
 });
 */
 
-function narcissistic(value) {
-
-   const arr = value.toString().split('');
-   const result = [];
-   for (let i = 0; i < arr.length; i++) {
-      result.push(Math.pow(arr[i], arr.length));
+var countSheep = function (num){
+   let result = '';
+   if (num === 0) {
+     return result;
+     }
+   for (let i = 0; i < num; i++) {
+     result += `${i+1} sheep...`;
    }
+   return result;
+ }
 
-   return result.reduce((prev, curr) => prev + curr).toString() == value;
-}
-// eslint-disable-next-line no-console
-console.log(narcissistic(371));
+console.log(countSheep(3));

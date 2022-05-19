@@ -3,6 +3,7 @@ import React from 'react';
 import Preloader from '../../common/Preloader/Preloader';
 
 import avatar from './../../../assets/img/avatar.jpg';
+import Status from './Status';
 import styles from './User.module.scss';
 
 const User = (props) => {
@@ -18,6 +19,7 @@ const User = (props) => {
          <div className={styles.allinfo} >
             <div className={styles.name}>{props.userProfile.fullName}</div>
             <div className={styles.info}>
+               <Status status={props.userProfile.status} />
                <div className={styles.infoWrapper}>
                   <ul className={styles.about}>
                      <li>Date of birthday: 26 april</li>
@@ -73,7 +75,7 @@ const User = (props) => {
                </div>
             </div>
          </div>
-      </div>
+      </div >
    );
 };
 
