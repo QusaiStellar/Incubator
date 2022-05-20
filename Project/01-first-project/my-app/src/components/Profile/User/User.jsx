@@ -10,7 +10,6 @@ const User = (props) => {
    if (!props.userProfile) {
       return <Preloader />;
    }
-
    return (
       <div className={styles.user} >
          <div className={styles.avatar} >
@@ -19,7 +18,10 @@ const User = (props) => {
          <div className={styles.allinfo} >
             <div className={styles.name}>{props.userProfile.fullName}</div>
             <div className={styles.info}>
-               <Status status={props.userProfile.status} />
+               <Status
+                  status={props.userStatus}
+                  setStatus={props.setStatus}
+               />
                <div className={styles.infoWrapper}>
                   <ul className={styles.about}>
                      <li>Date of birthday: 26 april</li>

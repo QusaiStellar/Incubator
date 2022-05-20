@@ -7,7 +7,7 @@ class Status extends React.Component {
 
    state = {
       isActive: false,
-
+      status: this.props.userStatus,
    };
 
    activateSetStatus = () => {
@@ -19,6 +19,14 @@ class Status extends React.Component {
    deactivateSetStatus = () => {
       this.setState({
          isActive: false,
+      }
+      );
+      this.props.setStatus(this.state.status);
+   };
+
+   onStatusChange = (e) => {
+      this.setState({
+         status: e.currentTarget.value,
       });
    };
 
@@ -26,8 +34,8 @@ class Status extends React.Component {
       return (
          <div className={styles.statusArea}>
             {this.state.isActive
-               ? <input onBlur={this.deactivateSetStatus} autoFocus={true} value={this.props.status} className={styles.setStatus} />
-               : <p onClick={this.activateSetStatus} className={styles.userStatus}>{this.props.status}</p>
+               ? <input onChange={this.onStatusChange} onBlur={this.deactivateSetStatus} autoFocus={true} value={this.state.status || ''} className={styles.setStatus} />
+               : <p onClick={this.activateSetStatus} className={styles.userStatus}>{this.props.status || 'Set status'}</p>
             }
          </div>
       );

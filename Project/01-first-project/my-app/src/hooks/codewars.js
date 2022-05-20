@@ -19,6 +19,6 @@ var countSheep = function (num){
      result += `${i+1} sheep...`;
    }
    return result;
- }
+ };
 
 console.log(countSheep(3));
