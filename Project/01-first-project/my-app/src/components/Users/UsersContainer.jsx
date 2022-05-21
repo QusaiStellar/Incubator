@@ -19,15 +19,7 @@ class UsersContainer extends React.Component {
 
    render = () => {
       return (
-         this.props.isFatching ? <Preloader /> : <Users totalUsersCount={this.props.totalUsersCount}
-            usersPerPage={this.props.usersPerPage}
-            selectedPage={this.props.selectedPage}
-            pageChanged={this.pageChanged}
-            users={this.props.users}
-            unfollow={this.props.unfollow}
-            follow={this.props.follow}
-            isRequest={this.props.isRequest}
-         />
+         this.props.isFatching ? <Preloader /> : <Users {...this.props} />
       );
    };
 };

@@ -7,7 +7,7 @@ class Status extends React.Component {
 
    state = {
       isActive: false,
-      status: this.props.userStatus,
+      status: this.props.status,
    };
 
    activateSetStatus = () => {
@@ -29,6 +29,14 @@ class Status extends React.Component {
          status: e.currentTarget.value,
       });
    };
+
+   componentDidUpdate(prevProps, prevState) {
+      if (prevProps.status !== this.props.status) {
+         this.setState({
+            status: this.props.status,
+         });
+      }
+   }
 
    render = () => {
       return (
