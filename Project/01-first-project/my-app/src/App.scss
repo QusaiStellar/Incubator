@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import '_variables.scss';
 
 html {
-   background-color: #edf2f6;
+   background-color: $primaryColor;
 }
 
 body {

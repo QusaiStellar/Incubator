@@ -1,14 +1,23 @@
 import React from 'react';
 
-import styles from './Login.module.css';
+import styles from './Login.module.scss';
 
 
 const Login = (props) => {
    return (
-      <section className={styles.wrapper}>
-         <h2 className={styles.title}>Для посещения данной страницы необходимо авторизоваться </h2>
-         <a href="https://social-network.samuraijs.com/login" className={styles.button}>Authorization</a>
-      </section>
+      <div className={styles.wrapper}>
+         <form className={styles.flex__wrapper}>
+            <h3>Login Here</h3>
+
+            <label for="username">Username</label>
+            <input type="text" placeholder="Email or Phone" id="username" />
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" />
+
+            <button>Log In</button>
+         </form>
+      </div>
    );
 };
 
