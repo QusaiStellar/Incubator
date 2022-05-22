@@ -26,10 +26,11 @@
       font-weight: 500;
       line-height: 42px;
       text-align: center;
+      margin-bottom: 20px;
    }
    & label{
       display: block;
-      margin-top: 30px;
+      margin-top: 15px;
       font-size: 16px;
       font-weight: 500;
    }
@@ -47,7 +48,13 @@
    & ::placeholder{
       color: #d1cdcd;   
    }
-   & button{
+   & .error {
+      padding: 10px 0;
+      height: 20px;
+      color: red;
+      font-weight: 600;
+   }
+   & .btn{
       margin-top: 50px;
       width: 100%;
       background-color: #edf2f6;

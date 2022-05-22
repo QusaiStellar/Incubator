@@ -4,8 +4,10 @@
    padding: 20px;
    border-radius: 10px;
    display: flex;
-   flex: 1 1 45%;
-   background-color: #edf2f6;
+   flex: 0 0 50%;
+   max-width: 50%;
+   width: 100%;
+   box-shadow: 15px 15px 20px #62636536;
 }
 .pages {
    display: block;
@@ -17,20 +19,19 @@
       cursor: pointer;
       padding-right: 10px;
       font-size: 18px;
-      color: #626365;
+      color: #62636536;
    }
 }
 .selectedPage {
    font-weight: 600;
    font-size: 30px;
-
 }
 
 .wrapper {
    width: 100%;
    display: flex;
    flex-wrap: wrap;
-   gap: 10px;
+   margin: 0 35px;
    align-items: center;
    justify-content: flex-start;
 }
