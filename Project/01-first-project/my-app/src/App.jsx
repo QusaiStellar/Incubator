@@ -1,4 +1,5 @@
 import './App.scss';
+import './variables.module.scss';
 import { Route, Routes } from 'react-router-dom';
 
 import DialogsContainer from './components/Dialogs/DialogsContainer';
