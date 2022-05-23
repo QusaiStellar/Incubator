@@ -1,5 +1,12 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { connect } from 'react-redux';
+import { Navigate } from 'react-router-dom';
+import { compose } from 'redux';
+
+import { login, logout } from '../../Redux/userAuthReducer';
+import { withAuthRedirect } from '../common/hoc/withAuthRedirect';
+import withRouter from '../common/hoc/withRouter';
 
 import styles from './Login.module.scss';
 
@@ -9,18 +16,20 @@ const Login = (props) => {
       register,
       handleSubmit,
       reset,
-      watch,
       formState: { errors, isValid },
    } = useForm({
       mode: 'onBlur',
    });
 
    const onSubmit = data => {
-      alert(JSON.stringify(data));
+      alert(data.email);
+      const { email, password, rememberMe } = data;
+      props.login(email, password, rememberMe);
       reset();
    };
 
-   console.log(watch('login'));
+   if (props.isAuth) { return <Navigate replace to="/news" />; }
+
 
    return (
       <div className={styles.wrapper}>
@@ -29,7 +38,7 @@ const Login = (props) => {
 
             <label >
                Username
-               <input placeholder="Email or Phone" {...register('login', {
+               <input type="email" className={styles.email} placeholder="Email" {...register('email', {
                   required: true,
                })} />
             </label>
@@ -39,7 +48,7 @@ const Login = (props) => {
 
             <label >
                Password
-               <input type="password" placeholder="Password" {...register('password', {
+               <input type="password" className={styles.password} placeholder="Password" {...register('password', {
                   required: true,
                })} />
             </label>
@@ -47,10 +56,25 @@ const Login = (props) => {
                {errors?.password && 'Error'}
             </div>
 
+            <label >
+               <input type="checkbox" placeholder="Remember me" {...register('rememberMe')} className={styles.rememberMe} />
+               Remember me
+            </label>
+
             <input type="submit" value="Log In" className={styles.btn} disabled={!isValid} />
          </form>
+         <button onClick={props.logout}>logout</button>
       </div>
    );
 };
 
-export default Login;
+const mapStateToProps = (state) => {
+   return {
+      isAuth: state.userAuth.isAuth,
+   };
+};
+
+export default compose(
+   connect(mapStateToProps, { login, logout }),
+   withRouter,
+)(Login);

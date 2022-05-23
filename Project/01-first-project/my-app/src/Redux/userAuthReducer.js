@@ -1,4 +1,4 @@
-import { auth } from '../api/api';
+import { authAPI } from '../api/api';
 
 const SET_USER_AUTH = 'SET_USER_AUTH';
 
@@ -19,7 +19,7 @@ const userAuthReducer = (state = initialState, action) => {
             userId: action.userId,
             login: action.login,
             email: action.email,
-            isAuth: true,
+            isAuth: action.isAuth,
          };
       }
       default:
@@ -27,20 +27,38 @@ const userAuthReducer = (state = initialState, action) => {
    }
 };
 
-
-export const setUserAuth = (userId, login, email) => {
+export const setUserAuth = (userId, login, email, isAuth) => {
    return {
       type: SET_USER_AUTH,
-      userId, login, email,
+      userId, login, email, isAuth,
    };
 };
 
 export const userAuth = () => {
    return (dispatch) => {
-      auth().then(data => {
+      authAPI.isAuth().then(data => {
          if (data.resultCode === 0) {
             const { id, login, email } = data.data;
-            dispatch(setUserAuth(id, login, email));
+            dispatch(setUserAuth(id, login, email, true));
+         }
+      });
+   };
+};
+
+export const login = (email, password, rememberMe) => {
+   return (dispatch) => {
+      authAPI.login(email, password, rememberMe).then(data => {
+         if (data.resultCode === 0) {
+            dispatch(userAuth());
+         }
+      });
+   };
+};
+export const logout = () => {
+   return (dispatch) => {
+      authAPI.logout().then(data => {
+         if (data.resultCode === 0) {
+            dispatch(setUserAuth(null, null, null, false));
          }
       });
    };

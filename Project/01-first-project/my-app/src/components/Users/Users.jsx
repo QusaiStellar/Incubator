@@ -5,7 +5,7 @@ import userImg from '../../assets/img/avatar.jpg';
 
 import styles from './Users.module.scss';
 
-function Users(props) {
+const Users = (props) => {
 
    const pages = [];
    const pagesCount = Math.ceil(props.totalUsersCount / props.usersPerPage);
