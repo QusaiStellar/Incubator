@@ -45,11 +45,14 @@ export const userAuth = () => {
    };
 };
 
-export const login = (email, password, rememberMe) => {
+export const login = (email, password, rememberMe, setError) => {
    return (dispatch) => {
       authAPI.login(email, password, rememberMe).then(data => {
          if (data.resultCode === 0) {
             dispatch(userAuth());
+         } else {
+            const { messages } = data;
+            setError('email', { type: 'server', message: messages });
          }
       });
    };

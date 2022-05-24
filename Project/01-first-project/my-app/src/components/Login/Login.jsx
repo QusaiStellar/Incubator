@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { compose } from 'redux';
 
-import { login, logout } from '../../Redux/userAuthReducer';
-import { withAuthRedirect } from '../common/hoc/withAuthRedirect';
+import { login } from '../../Redux/userAuthReducer';
 import withRouter from '../common/hoc/withRouter';
 
 import styles from './Login.module.scss';
@@ -16,15 +15,15 @@ const Login = (props) => {
       register,
       handleSubmit,
       reset,
+      setError,
       formState: { errors, isValid },
    } = useForm({
       mode: 'onBlur',
    });
 
    const onSubmit = data => {
-      alert(data.email);
       const { email, password, rememberMe } = data;
-      props.login(email, password, rememberMe);
+      props.login(email, password, rememberMe, setError);
       reset();
    };
 
@@ -43,7 +42,7 @@ const Login = (props) => {
                })} />
             </label>
             <div className={styles.error}>
-               {errors?.login && 'Error'}
+               {errors.email?.message}
             </div>
 
             <label >
@@ -63,7 +62,6 @@ const Login = (props) => {
 
             <input type="submit" value="Log In" className={styles.btn} disabled={!isValid} />
          </form>
-         <button onClick={props.logout}>logout</button>
       </div>
    );
 };
@@ -75,6 +73,6 @@ const mapStateToProps = (state) => {
 };
 
 export default compose(
-   connect(mapStateToProps, { login, logout }),
+   connect(mapStateToProps, { login }),
    withRouter,
 )(Login);
