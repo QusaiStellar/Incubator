@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 
 import { addPost, setUser, getStatus, setStatus } from '../../Redux/profilePageReducer';
+import { withAuthRedirect } from '../common/hoc/withAuthRedirect';
 import withRouter from '../common/hoc/withRouter';
 
 import Profile from './Profile';
@@ -13,6 +14,9 @@ class ProfileContainer extends React.Component {
       let userId = this.props.router.params.userId;
       if (!userId) {
          userId = this.props.autorizedUserId;
+         if (!userId) {
+            userId = this.props.history.push('/login');
+         }
       }
       this.props.setUser(userId);
       this.props.getStatus(userId);

@@ -5,6 +5,7 @@ import styles from './Navigation.module.css';
 const activeLink = ({ isActive }) => isActive ? styles.active : '';
 
 const Navigation = (props) => {
+
    return (
       <nav className={styles.navigation}>
          <NavLink to={`/profile/${props.userId}`} className={activeLink}>

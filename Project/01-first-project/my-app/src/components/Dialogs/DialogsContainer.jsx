@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import { withAuthRedirect } from '../common/hoc/withAuthRedirect';
 
-import withRouter from '../common/hoc/withRouter';
+import withRouter from './../common/hoc/withRouter';
+
 
 import Dialogs from './Dialogs';
 
@@ -20,5 +22,6 @@ const mapStateToProps = (state) => {
 
 export default compose(
    connect(mapStateToProps,),
-   withRouter
+   withAuthRedirect,
+   withRouter,
 )(DialogsContainer);
