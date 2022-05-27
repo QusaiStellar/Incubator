@@ -29,7 +29,8 @@ export const setAutorized = () => {
 
 export const isAutorized = () => {
    return (dispatch) => {
-      Promise.all([userAuth()], dispatch(setAutorized()));
+      const promise = dispatch(userAuth());
+      Promise.all([promise]).then(() => { dispatch(setAutorized()); });
    };
 };
 

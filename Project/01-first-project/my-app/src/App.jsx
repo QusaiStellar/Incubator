@@ -3,6 +3,8 @@ import './variables.module.scss';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
 import NavigationContainer from './components/Navigation/NavigationContainer';
@@ -12,7 +14,6 @@ import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import Login from './components/Login/Login';
 import NewsContainer from './components/News/NewsContainer';
-import { connect } from 'react-redux';
 import { isAutorized } from './Redux/appReducer';
 import Preloader from './components/common/Preloader/Preloader';
 
@@ -47,13 +48,13 @@ class App extends React.Component {
             </div>
          </div>
       );
-   }
+   };
 };
 
 const mapStatetoProps = (state) => {
    return {
       initialized: state.app.autorized,
-   }
-}
+   };
+};
 
 export default connect(mapStatetoProps, { isAutorized })(App);
